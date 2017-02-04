@@ -19,17 +19,6 @@ function solarmove_widgets_init() {
 		'after_title' => '</h3>',
 	) ); 
 
-    $layout = $integral['page-2-2-layout'];
-	register_sidebar( array(
-		'name' =>__( 'Page 2.2 Columns Section', 'integral'),
-		'id' => 'page-2-2-column-widget',
-		'description' => __( 'The column section which appears on page 2.2. Drag and drop widgets titled [Solarmove - Column Widget] here to add columns.', 'integral' ),
-		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' feature">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	) );
-
     $layout = $integral['page-3-2-layout'];
 	register_sidebar( array(
 		'name' =>__( 'Page 3.2 Columns Section', 'integral'),
@@ -46,6 +35,17 @@ function solarmove_widgets_init() {
 		'name' =>__( 'Page 3.3 Columns Section', 'integral'),
 		'id' => 'page-3-3-column-widget',
 		'description' => __( 'The column section which appears on page 3.3. Drag and drop widgets titled [Solarmove - Column Widget] here to add columns.', 'integral' ),
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' feature">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+
+    $layout = $integral['page-4-1-layout'];
+	register_sidebar( array(
+		'name' =>__( 'Page 4.1 Columns Section', 'integral'),
+		'id' => 'page-4-1-column-widget',
+		'description' => __( 'The column section which appears on page 4.1. Drag and drop widgets titled [Solarmove - Column Widget] here to add columns.', 'integral' ),
 		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' feature">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',

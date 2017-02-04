@@ -545,13 +545,14 @@
                         'page-2-0'   => 'Page 2.0',
                         'page-2-1'   => 'Page 2.1',
                         'page-2-2'   => 'Page 2.2',
-                        'page-2-3'   => 'Page 2.3',
                         'page-3-0'   => 'Page 3.0',
                         'page-3-1'   => 'Page 3.1',
                         'page-3-2'   => 'Page 3.2',
                         'page-3-3'   => 'Page 3.3',
                         'page-3-4'   => 'Page 3.4',
                         'page-3-5'   => 'Page 3.5',
+                        'page-4-0'   => 'Page 4.0',
+                        'page-4-1'   => 'Page 4.1',
                         'brands'   => 'Brands',
                         'features'   => 'Features',
                         'work'   => 'Work',
@@ -1621,101 +1622,9 @@
         'icon'   => 'el el-chevron-right',
         'subsection' => true,
         'fields' => array(
-             array(
-                'id'       => 'page-2-2-title',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Title',
-            ),
-            
-            array(
-                'id'       => 'page-2-2-title-icon',
-                'type'     => 'text',
-                'title'    => __( 'Title Icon', 'integral' ),
-                'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
-                'default'  => 'fa-space-shuttle',
-            ),
-            
-            array(
-                'id'       => 'page-2-2-subtitle',
-                'type'     => 'editor',
-                'title'    => __( 'Subtitle', 'integral' ),
-                'default'  => 'Bla bla bla',
-            ),
-
-            array(
-                    'id'       => 'page-2-2-create',
-                    'type'     => 'raw',
-                    'title'    => __( 'Add page 2.2 entry', 'integral' ),
-                    'content' => __( 'Columns are created using Widgets. Go to APPEARANCE > Widgets and locate [2.2 Columns Section]. Add widgets entitled [Solarmove - Column Widget] to this area to add columns. Add as many as you like.', 'integral' ),
-
-            ),
-            
-            array(
-                'id'          => 'page-2-2-layout',
-                'type'        => 'select',
-                'title' => __( 'Page 2.2 Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of services to appear in a row. Additional services will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
-                ),
-                'default' => '4'
-            ),
-            
-            
-            array(
-                'id'       => 'sfeature_icon_properties',
-                'type'     => 'typography',
-                'title'    => __( 'Page 2.2 Icon Styles', 'integral' ),
-                'subtitle' => __( 'Specify the height and color of the icons. You can override styling for specific icons in the <a href="admin.php?page=Integral&tab=24">Custom Code</a> section. For color ideas visit <a target="_blank" href="http://www.colourlovers.com/colors/">ColourLovers</a>.', 'integral' ),
-                'output'    => array('.services .feature span'),
-                'preview' => false,
-                'subsets'       => false,
-                'font-weight'    => false,
-                'font-style'    => false,
-                'font-family' => false,
-                'text-align'=> false,
-                'line-height' => false,
-                 'default'  => array(
-                    'color'       => '#fff',
-                    'font-size'   => '80px',
-                  )
-
-                ),
-            array(
-                    'id'          => 'page-2-2-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-            ),
-            
-            array(
-                    'id'       => 'page-2-2-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the services section.', 'integral' ),
-            )
-        )
-    ) );
-
-
-    // -> START Page 2.3
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Page 2.3', 'integral' ),
-        'id'     => 'page-2-3',
-        'icon'   => 'el el-chevron-right',
-        'subsection' => true,
-        'fields' => array(
 
                     array(
-                        'id'       => 'page-2-3-slide-1-src',
+                        'id'       => 'page-2-2-slide-1-src',
                         'type'     => 'background',
                         'title'    => __( 'Slide 1 background', 'integral' ),
                         'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the carousel item', 'integral' ),
@@ -1728,19 +1637,19 @@
                                         )
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-1-title',
+                        'id'       => 'page-2-2-slide-1-title',
                         'type'     => 'text',
                         'title'    => __( 'Title slide 1', 'integral' ),
                         'default'  => 'Title slide 1',
                     ), 
                     array(
-                        'id'       => 'page-2-3-slide-1-subtitle',
+                        'id'       => 'page-2-2-slide-1-subtitle',
                         'type'     => 'editor',
                         'title'    => __( 'Subtitle slide 1', 'integral' ),
                         'default'  => 'Subtitle slide 1.',
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-2-src',
+                        'id'       => 'page-2-2-slide-2-src',
                         'type'     => 'background',
                         'title'    => __( 'Slide 2 background', 'integral' ),
                         'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the carousel item', 'integral' ),
@@ -1753,19 +1662,19 @@
                                         )
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-2-title',
+                        'id'       => 'page-2-2-slide-2-title',
                         'type'     => 'text',
                         'title'    => __( 'Title slide 2', 'integral' ),
                         'default'  => 'Title slide 2',
                     ), 
                     array(
-                        'id'       => 'page-2-3-slide-2-subtitle',
+                        'id'       => 'page-2-2-slide-2-subtitle',
                         'type'     => 'editor',
                         'title'    => __( 'Subtitle slide 2', 'integral' ),
                         'default'  => 'Subtitle slide 2.',
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-3-src',
+                        'id'       => 'page-2-2-slide-3-src',
                         'type'     => 'background',
                         'title'    => __( 'Slide 3 background', 'integral' ),
                         'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the carousel item', 'integral' ),
@@ -1778,19 +1687,19 @@
                                         )
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-3-title',
+                        'id'       => 'page-2-2-slide-3-title',
                         'type'     => 'text',
                         'title'    => __( 'Title slide 3', 'integral' ),
                         'default'  => 'Title slide 3',
                     ), 
                     array(
-                        'id'       => 'page-2-3-slide-3-subtitle',
+                        'id'       => 'page-2-2-slide-3-subtitle',
                         'type'     => 'editor',
                         'title'    => __( 'Subtitle slide 3', 'integral' ),
                         'default'  => 'Subtitle slide 3.',
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-4-src',
+                        'id'       => 'page-2-2-slide-4-src',
                         'type'     => 'background',
                         'title'    => __( 'Slide 4 background', 'integral' ),
                         'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the carousel item', 'integral' ),
@@ -1803,19 +1712,19 @@
                                         )
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-4-title',
+                        'id'       => 'page-2-2-slide-4-title',
                         'type'     => 'text',
                         'title'    => __( 'Title slide 4', 'integral' ),
                         'default'  => 'Title slide 4',
                     ), 
                     array(
-                        'id'       => 'page-2-3-slide-4-subtitle',
+                        'id'       => 'page-2-2-slide-4-subtitle',
                         'type'     => 'editor',
                         'title'    => __( 'Subtitle slide 4', 'integral' ),
                         'default'  => 'Subtitle slide 4.',
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-5-src',
+                        'id'       => 'page-2-2-slide-5-src',
                         'type'     => 'background',
                         'title'    => __( 'Slide 5 background', 'integral' ),
                         'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the carousel item', 'integral' ),
@@ -1828,23 +1737,23 @@
                                         )
                     ),
                     array(
-                        'id'       => 'page-2-3-slide-5-title',
+                        'id'       => 'page-2-2-slide-5-title',
                         'type'     => 'text',
                         'title'    => __( 'Title slide 5', 'integral' ),
                         'default'  => 'Title slide 5',
                     ), 
                     array(
-                        'id'       => 'page-2-3-slide-5-subtitle',
+                        'id'       => 'page-2-2-slide-5-subtitle',
                         'type'     => 'editor',
                         'title'    => __( 'Subtitle slide 5', 'integral' ),
                         'default'  => 'Subtitle slide 5.',
                     ),  
                     array(
-                        'id'       => 'page-2-3-section-toggle',
+                        'id'       => 'page-2-2-section-toggle',
                         'type'     => 'switch',
                         'default'  => true,
                         'title'    => __( 'Disable Section', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the page-2-3 section.', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the page-2-2 section.', 'integral' ),
                     )
         )
     ) );
@@ -2687,27 +2596,249 @@
         )
     ) );
 
-    // -> START Brands
     Redux::setSection( $opt_name, array(
-        'title'  => __( 'Brands', 'integral' ),
-        'id'     => 'brands',
-        'icon'   => 'el el-star-empty',
-        'desc'  => __( 'Upload images/logos of brands', 'integral' ),
+        'title'            => __( 'Page Autoconstruction', 'integral' ),
+        'id'               => 'page-4',
+        'desc'             => __( 'Page Autoconstruction', 'integral' ),
+        'icon'             => 'el',
+    ) );
+
+    // -> START Page 4.0
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Page 4.0', 'integral' ),
+        'id'     => 'page-4-0',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
         'fields' => array(
 
-		array(
-                'id'       => 'brands-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Brands', 'integral' ),
-                'content' => __( 'Brands are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Brands Section]. Add widgets entitled [Integral - Brand Widget] to this area to add Brands. Add as many as you like.', 'integral' ),
-
-                ),
+            array(
+                'id'       => 'page-4-0-bg',
+                'type'     => 'background',
+                'title'    => __( 'Background', 'integral' ),
+                'subtitle' => __( 'Change the background image or select a color. This will fill up the background of the welcome section.', 'integral' ),
+                'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                'output'   => array('.sm_hero_layout_page-4-0'),
+                'compiler'    => 'true',
+                'default'  => array(
+                            'background-image' => get_template_directory_uri().'/images/bg-welcome.jpg',
+                            'background-size' => 'cover',
+                        )
+            ),
             
             array(
-                'id'          => 'brands-layout',
+                'id'       => 'page-4-0-padding',
+                'type'     => 'spacing',
+                'title'    => __( 'Section Padding', 'integral' ),
+                'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of the welcome section.', 'integral' ),
+                'output'   => array('.sm_hero_layout_page-4-0'),
+                'compiler'    => 'true',
+                'mode'    => 'padding',
+                'units'     => array('%', 'px'),
+                'units_extended'   => 'true',
+                'display_units'   => 'true',
+                'left'   => 'false',
+                'right'   => 'false',
+                'default'            => array(
+                        'padding-top'     => '190', 
+                        'padding-bottom'  => '150', 
+                        'units'          => 'px', 
+                    )
+            ),
+            
+            array(
+                'id'       => 'page-4-0-overlay-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Background Overlay', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
+            ),
+            
+            array(
+                'id'    => 'page-4-0-overlay-info',
+                'type'  => 'info',
+                'style' => 'info',
+                'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+              
+            ),
+            
+            array(
+                'id'       => 'page-4-0-parallax-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Parallax Effect', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-title',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 1', 'integral' ),
+                'subtitle' => __( '1st line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'Integral',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-page-4-0-title',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 1 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_page-4-0 h1'),
+                'default'      => array(
+                    'font-size'   => '120px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-subtitle',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 2', 'integral' ),
+                'subtitle' => __( '2nd line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'One Page Theme',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-page-4-0-subtitle',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 2 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_page-4-0 h2'),
+                'default'      => array(
+                    'font-size'   => '90px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'line-height' => '',
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+             array(
+                'id'       => 'page-4-0-tagline',
+                'type'     => 'editor',
+                'title'    => __( 'Tagline', 'integral' ),
+                'subtitle' => __( 'Tagline for the hero section', 'integral' ),
+                'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                'default'  => 'A simple & elegant theme for freelancers, agencies and businesses. Perfect to promote your work or business.',
+            ),
+
+             array(
+                'id'       => 'page-4-0-btn1-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 1', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-btn1-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => 'View Features',
+                'required' => array( 'page-4-0-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-btn1-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '#features',
+                'required' => array( 'page-4-0-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-btn2-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 2', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+             array(
+                'id'       => 'page-4-0-btn2-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 Text', 'integral' ),
+                'default'  => 'Download Now',
+                'required' => array( 'page-4-0-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'page-4-0-btn2-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 URL', 'integral' ),
+                'default'  => '#pts',
+                'required' => array( 'page-4-0-btn2-toggle', '=', true ),
+            )
+        )
+    ) );
+
+    // -> START Page 4.1
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Page 4.1', 'integral' ),
+        'id'     => 'page-4-1',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+             array(
+                'id'       => 'page-4-1-title',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Title',
+            ),
+            
+            array(
+                'id'       => 'page-4-1-title-icon',
+                'type'     => 'text',
+                'title'    => __( 'Title Icon', 'integral' ),
+                'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
+                'default'  => 'fa-space-shuttle',
+            ),
+            
+            array(
+                'id'       => 'page-4-1-subtitle',
+                'type'     => 'editor',
+                'title'    => __( 'Subtitle', 'integral' ),
+                'default'  => 'Bla bla bla',
+            ),
+
+            array(
+                    'id'       => 'page-4-1-create',
+                    'type'     => 'raw',
+                    'title'    => __( 'Add page 4.1 entry', 'integral' ),
+                    'content' => __( 'Columns are created using Widgets. Go to APPEARANCE > Widgets and locate [4.1 Columns Section]. Add widgets entitled [Solarmove - Column Widget] to this area to add columns. Add as many as you like.', 'integral' ),
+
+            ),
+            
+            array(
+                'id'          => 'page-4-1-layout',
                 'type'        => 'select',
-                'title' => __( 'Brands Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of Brands to appear in a row. Additional Brands will automatically default to the next row.', 'integral' ),
+                'title' => __( 'Page 4.1 Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of services to appear in a row. Additional services will automatically default to the next row.', 'integral' ),
                 'options'     => array(
                     '2'             => __( '6 per row (6 columns)', 'integral' ),
                     '3'             => __( '4 per row (4 columns)', 'integral' ),
@@ -2715,64 +2846,16 @@
                     '6'             => __( '2 per row (2 columns)', 'integral' ),
                     '12'             => __( '1 per row (1 column)', 'integral' ),
                 ),
-                'default' => '2'
+                'default' => '4'
             ),
+            
             
             array(
-                    'id'          => 'brands-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-            ),
-            
-            array(
-                    'id'       => 'brands-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the Brands section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-    // -> START Features
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Features', 'integral' ),
-        'id'     => 'features',
-        'icon'   => 'el el-ok-sign',
-        'fields' => array(
-
-                array(
-                'id'       => 'feature-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Features', 'integral' ),
-                'content' => __( 'Features are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Features Section]. Add widgets entitled [Integral - Feature Widget] to this area to add features. Add as many as you like.', 'integral' ),
-
-                ),
-            
-                array(
-                    'id'          => 'features-layout',
-                    'type'        => 'select',
-                    'title' => __( 'Features Layout', 'integral' ),
-                    'subtitle' => __( 'Configure the number of features to appear in a row. Additional features will automatically default to the next row.', 'integral' ),
-                    'options'     => array(
-                    	'2'             => __( '6 per row (6 columns)', 'integral' ),
-                        '3'             => __( '4 per row (4 columns)', 'integral' ),
-                        '4'             => __( '3 per row (3 columns)', 'integral' ),
-                        '6'             => __( '2 per row (2 columns)', 'integral' ),
-                        '12'             => __( '1 per row (1 column)', 'integral' ),
-                    ),
-                    'default' => '4'
-                ),
-
-                array(
-                'id'       => 'feature-icons',
+                'id'       => 'sfeature_icon_properties',
                 'type'     => 'typography',
-                'title'    => __( 'Features Icon Styles', 'integral' ),
-                'subtitle' => __( 'Specify the height and color of the icons. You can override styling for specific icons in the styles.css file located in <a href="theme-editor.php">APPEARANCE > EDITOR</a>. For color ideas visit <a target="_blank" href="http://www.colourlovers.com/colors/">ColourLovers</a>.', 'integral' ),
-                'output'    => array('.features .feature i'),
+                'title'    => __( 'Page 4.1 Icon Styles', 'integral' ),
+                'subtitle' => __( 'Specify the height and color of the icons. You can override styling for specific icons in the <a href="admin.php?page=Integral&tab=24">Custom Code</a> section. For color ideas visit <a target="_blank" href="http://www.colourlovers.com/colors/">ColourLovers</a>.', 'integral' ),
+                'output'    => array('.services .feature span'),
                 'preview' => false,
                 'subsets'       => false,
                 'font-weight'    => false,
@@ -2780,1681 +2863,55 @@
                 'font-family' => false,
                 'text-align'=> false,
                 'line-height' => false,
-                'default'  => array(
-                    'color'       => '#f64744',
-                    'font-size'   => '28px',
-                  )
-
-                ),
-
-          array(
-                'id'       => 'feature-header',
-                'type'     => 'typography',
-                'title'    => __( 'Feature Titles', 'integral' ),
-                'subtitle' => __( 'Specify the feature title properties.', 'integral' ),
-                'output'    => array('.features .feature h4'),
-                'preview' => true,
-                'subsets'       => false,
-                'font-weight'    => true,
-                'font-style'    => true,
-                'text-align'=> true,
-                'line-height' => true,
-                'letter-spacing' => true,
-                'default'  => array(
-                    'font-weight'       => '600',
-                    'font-size'   => '18px',
-                    'letter-spacing' => '1px',
-                  )
-
-                ),
-                array(
-                    'id'          => 'feature-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-                ),
-            
-                array(
-                    'id'       => 'features-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the features section.', 'integral' ),
-                ),
-
-
-        )
-    ) );
-
-
- // -> START Work
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Work', 'integral' ),
-        'id'     => 'work',
-        'icon'   => 'el el-laptop',
-        'fields' => array(
-             array(
-                'id'       => 'work-title',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Work',
-            ),
-            
-            array(
-                'id'       => 'work-title-icon',
-                'type'     => 'text',
-                'title'    => __( 'Title Icon', 'integral' ),
-                'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
-                'default'  => 'fa-leaf',
-            ),
-            
-            array(
-                'id'       => 'work-subtitle',
-                'type'     => 'editor',
-                'title'    => __( 'Subtitle', 'integral' ),
-                'default'  => 'Bla bla bla',
-            ),
-            
-            array(
-                    'id'          => 'work-text',
-                    'type'        => 'select',
-                    'title' => __( 'Content', 'integral' ),
-                    'desc'    => __( 'Select the page you want to pull content from to populate this section', 'integral' ),
-                    'data'     => 'pages',
-                    
-                ),
-            
-            array(
-                    'id'          => 'work-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-            ),
-            
-            array(
-                    'id'       => 'work-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the work section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-
-// -> START Project SINGLE TEST
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Projects Single', 'integral' ),
-        'id'     => 'project-single',
-        'icon'   => 'el el-file-edit',
-        'fields' => array(
-
-			array(
-                'id'       => 'project-single-title',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Projects Single',
-            ),
-
-
-   			array(
-                'id'       => 'project-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Projects', 'integral' ),
-                'content' => __( 'Projects are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Projects Section]. Add widgets entitled [Integral - Single Project Widget] to this area to add projects. Add as many as you like.', 'integral' ),
-
-            ),
-            
-            array(
-                'id'    => 'project-single-info',
-                'type'  => 'info',
-                'style' => 'info',
-                'title' => __( 'If you upload more than one image for a project, the slider will be automatically enabled. Configure the slider settings below.', 'integral' ),
-              
-            ),
-            
-            array(
-                'id'       => 'project-single-autoplay',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Autoplay Slider', 'integral' ),
-                'subtitle' => __( 'Toggle the autoplay function for the slider', 'integral' ),
-            ),
-
-
-            array(
-                'id'            => 'project-single-slider',
-                'type'          => 'slider',
-                'title'         => __( 'Slide Delay', 'integral' ),
-                'subtitle'      => __( 'This is the amount of delay in seconds between each slide', 'integral' ),
-                'default'       => 7,
-                'min'           => 1,
-                'step'          => 1,
-                'max'           => 20,
-                'display_value' => 'label'
-            ),
-            
-            array(
-                    'id'          => 'project-single-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-            ),
-            
-            array(
-                    'id'       => 'project-single-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the single projects section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-// -> START Project Grid
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Projects Grid', 'integral' ),
-        'id'     => 'project-grid',
-        'icon'   => 'el el-th-large',
-        'fields' => array(
-
-			array(
-                'id'       => 'project-grid-maintitle',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Projects Grid',
-            ),
-
-
-   			array(
-                'id'       => 'project-grid-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Projects', 'integral' ),
-                'content' => __( 'Projects are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Projects Grid Section]. Add widgets entitled [Integral - Grid Project Widget] to this area to add projects. Add as many as you like.', 'integral' ),
-
-                ),
-            
-            array(
-                'id'          => 'projects-grid-layout',
-                'type'        => 'select',
-                'title' => __( 'Projects Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of projects to appear in a row. Additional projects will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
-                ),
-                'default' => '4'
-            ),
-            array(
-                    'id'          => 'project-grid-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-            ),
-            
-            array(
-                    'id'       => 'projects-grid-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the projects grid section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-
-// -> START Clients
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Clients', 'integral' ),
-        'id'     => 'clients',
-        'icon'   => 'el el-user',
-        'fields' => array(
-
-
-			array(
-                'id'       => 'clients-maintitle',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Our Clients',
-            ),
-
-   			array(
-                'id'       => 'clients-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Clients', 'integral' ),
-                'content' => __( 'Clients are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Clients Section]. Add widgets entitled [Integral - Client Widget] to this area to add clients. Add as many as you like.', 'integral' ),
-
-                ),
-            
-            array(
-                'id'          => 'clients-layout',
-                'type'        => 'select',
-                'title' => __( 'Clients Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of clients to appear in a row. Additional clients will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
-                ),
-                'default' => '2'
-            ),
-            
-            array(
-                    'id'          => 'clients-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-            ),
-            
-            array(
-                    'id'       => 'clients-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the clients section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-// -> START Stats
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Stats', 'integral' ),
-        'id'     => 'stats',
-        'icon'   => 'el el-graph',
-        'desc'  => __( 'Create stats with animated counters', 'integral' ),
-        'fields' => array(
-
-            array(
-                'id'       => 'stats-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Stats', 'integral' ),
-                'content' => __( 'Stats are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Stats Section]. Add widgets entitled [Integral - Stat Widget] to this area to add Stats. Add as many as you like.', 'integral' ),
-
-                ),
-            
-            array(
-                'id'       => 'stats-bg',
-                'type'     => 'background',
-                'title'    => __( 'Background', 'integral' ),
-                'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Stats section.', 'integral' ),
-                'output'   => array('.stats'),
-                'compiler'    => 'true',
-                'default'  => array(
-                                    'background-color' => '',
-                                )
-
-            ),
-            
-            array(
-                'id'       => 'stats-typrography',
-                'type'     => 'typography',
-                'title'    => __( 'Text Styles', 'integral' ),
-                'subtitle' => __( 'Change the size, color and style of the text and icons', 'integral' ),
-                'subsets'       => false,
-                'font-style'    => true,
-                'font-size'    => true,
-                'text-align'    => false,
-                'line-height'    => false,
-                'color'       => true,
-                'text-transform'   => true,
-                'output'	=> array('.stats .fa, .stats p'),
-                'default'  => array(
+                 'default'  => array(
                     'color'       => '#fff',
+                    'font-size'   => '80px',
                   )
-            ),
 
-            array(
-                'id'          => 'stats-layout',
-                'type'        => 'select',
-                'title' => __( 'Stats Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of Stats to appear in a row. Additional Stats will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
                 ),
-                'default' => '3'
-            ),
-            
             array(
-                    'id'          => 'stats-custom-class',
+                    'id'          => 'page-4-1-custom-class',
                     'type'        => 'text',
                     'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
                     'title' => __( 'Custom Class', 'integral' ),
                     'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    'default' => 'no-padding-bottom',
             ),
             
             array(
-                    'id'       => 'stats-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the Stats section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-
-// -> START Testimonials
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Testimonials', 'integral' ),
-        'id'     => 'testimonials',
-        'icon'   => 'el el-quotes',
-        'fields' => array(
-
-		           array(
-                    'id'       => 'testi-create',
-                    'type'     => 'raw',
-                    'title'    => __( 'Add Testimonials', 'integral' ),
-                    'content' => __( 'Testimonials are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Testimonials Section]. Add widgets entitled [Integral - Testimonial Widget] to this area to add testimonials. Add as many as you like.', 'integral' ),
-
-                    ),
-            
-                    array(
-		                'id'       => 'testi-title',
-		                'type'     => 'text',
-		                'title'    => __( 'Title', 'integral' ),
-                        'subtitle' => __( 'If you do not want to display a title simply delete the text in the field.', 'integral' ),
-		                'default'  => 'Testimonials',
-		            ),
-
-				    array(
-                        'id'       => 'testi-bg',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', 'integral' ),
-                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Testimonials section', 'integral' ),
-                        'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
-                        'output'   => array('.testimonials'),
-                        'compiler'    => 'true',
-                        'default'  => array(
-	                                        'background-image' => get_template_directory_uri().'/images/bg-testimonials.jpg',
-	                                        'background-size' => 'cover',
-	                                    )
-                    ),
-            
-                    array(
-                        'id'       => 'testi-padding',
-                        'type'     => 'spacing',
-                        'title'    => __( 'Section Padding', 'integral' ),
-                        'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of testimonials section.', 'integral' ),
-                        'output'   => array('.testimonials'),
-                        'compiler'    => 'true',
-                        'mode'    => 'padding',
-                        'units'     => array('%', 'px'),
-                        'units_extended'   => 'true',
-                        'display_units'   => 'true',
-                        'left'   => 'false',
-                        'right'   => 'false',
-                        'default'            => array(
-                                'padding-top'     => '100px', 
-                                'padding-bottom'  => '110px', 
-                                'units'          => 'px', 
-                            )
-                    ),
-            
-                    array(
-                        'id'       => 'testi-overlay-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Background Overlay', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
-                    ),
-            
-                    array(
-                        'id'    => 'testi-overlay-info',
-                        'type'  => 'info',
-                        'style' => 'info',
-                        'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
-
-                    ),
-
-                    array(
-                                    'id'       => 'testi-parallax-toggle',
-                                    'type'     => 'switch',
-                                    'default'  => true,
-                                    'title'    => __( 'Parallax Effect', 'integral' ),
-                                    'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
-                                ),
-
-              array(
-                    'id'    => 'testi-info',
-                    'type'  => 'info',
-                    'style' => 'info',
-                    'title' => __( 'If there is more than one testimonial, the slider will be automatically enabled. Configure the slider settings below.', 'integral' ),
-
-                ),
-
-            array(
-                'id'       => 'testi-autoplay',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Autoplay Slider', 'integral' ),
-                'subtitle' => __( 'Toggle the autoplay function for the testimonials slider', 'integral' ),
-            ),
-
-
-            array(
-                'id'            => 'testi-slider',
-                'type'          => 'slider',
-                'title'         => __( 'Slide Delay', 'integral' ),
-                'subtitle'      => __( 'This is the amount of delay in seconds between each testimonial', 'integral' ),
-                'default'       => 7,
-                'min'           => 1,
-                'step'          => 1,
-                'max'           => 20,
-                'display_value' => 'label'
-            ),
-            
-            array(
-                    'id'          => 'testi-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-            ),
-            
-            array(
-                    'id'       => 'testi-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the testimonials section.', 'integral' ),
-            ),
-
-        )
-    ) );
-
-
-
-
-// -> START Pricing Tables
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Pricing Tables', 'integral' ),
-        'id'     => 'ptables',
-        'icon'   => 'el el-usd',
-        'desc'  => __( 'Create unlimited pricing tables for products and services.', 'integral' ),
-        'fields' => array(
-
-
-			array(
-                'id'       => 'ptables-maintitle',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Pricing Tables',
-            ),
-
-   			array(
-                'id'       => 'ptables-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Pricing Tables', 'integral' ),
-                'content' => __( 'Pricing tables are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Pricing Tables Section]. Add widgets entitled [Integral - Pricing Table Widget] to this area to add pricing tables. Add as many as you like.', 'integral' ),
-
-                ),
-            
-            array(
-                'id'          => 'ptables-layout',
-                'type'        => 'select',
-                'title' => __( 'Pricing Tables Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of pricing tables to appear in a row. Additional pricing tables will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
-                ),
-                'default' => '4'
-            ),
-
-            array(
-                    'id'          => 'ptables-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-            ),
-            
-            array(
-                    'id'       => 'ptables-section-toggle',
+                    'id'       => 'page-4-1-section-toggle',
                     'type'     => 'switch',
                     'default'  => true,
                     'title'    => __( 'Disable Section', 'integral' ),
                     'subtitle' => __( 'Toggle off to disable the services section.', 'integral' ),
-            ),
+            )
         )
     ) );
 
-// -> START Call to Action
+    // -> START Footer
     Redux::setSection( $opt_name, array(
-        'title'  => __( 'Call to Action 1', 'integral' ),
-        'id'     => 'calltoaction',
-        'icon'   => 'el el-hand-up',
+        'title'  => __( 'Footer', 'integral' ),
+        'id'     => 'copyright',
+        'icon'   => 'el el-lock',
         'fields' => array(
 
-                    array(
-                        'id'       => 'calltoaction-bg',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', 'integral' ),
-                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Call-to-Action section.', 'integral' ),
-                        'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
-                        'output'   => array('.calltoaction'),
-                        'compiler'    => 'true',
-                        'default'  => array(
-                                            'background-image' => get_template_directory_uri().'/images/bg-cta.jpg',
-                                            'background-size' => 'cover',
-                                        )
-                    ),
-            
-                    array(
-                        'id'       => 'calltoaction-padding',
-                        'type'     => 'spacing',
-                        'title'    => __( 'Section Padding', 'integral' ),
-                        'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of call-to-action section.', 'integral' ),
-                        'output'   => array('.calltoaction'),
-                        'compiler'    => 'true',
-                        'mode'    => 'padding',
-                        'units'     => array('%', 'px'),
-                        'units_extended'   => 'true',
-                        'display_units'   => 'true',
-                        'left'   => 'false',
-                        'right'   => 'false',
-                        'default'            => array(
-                                'padding-top'     => '100px', 
-                                'padding-bottom'  => '110px', 
-                                'units'          => 'px', 
-                            )
-                    ),
-            
-                    array(
-                        'id'       => 'calltoaction-overlay-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Background Overlay', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the dark color and pattern overlay which appears over the background image.', 'integral' ),
-                    ),
-            
-                    array(
-                        'id'    => 'calltoaction-overlay-info',
-                        'type'  => 'info',
-                        'style' => 'info',
-                        'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
-
-                    ),
-
-                    array(
-                        'id'       => 'calltoaction-parallax-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Parallax Effect', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
-                    ),
-
-					array(
-	                'id'       => 'calltoaction-title',
-	                'type'     => 'text',
-	                'title'    => __( 'Title', 'integral' ),
-	                'default'  => 'Choose Integral',
-		            ),
-
-		            array(
-	                'id'       => 'calltoaction-text',
-	                'type'     => 'editor',
-	                'title'    => __( 'Content', 'integral' ),
+            array(
+                'id'       => 'copyright-text',
+                'type'     => 'editor',
+                'title'    => __( 'Copyright Text', 'integral' ),
                     'desc'    => __( 'Custom HTML allowed', 'integral' ),
-                    'default'   => 'Don’t settle for any theme for your Website, Integral is the best choice & you can buy it today at an affordable price!',
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction-btn1-toggle',
-		                'type'     => 'switch',
-		                'default'  => false,
-		                'title'    => __( 'Toggle Button 1', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction-btn1-text',
-		                'type'     => 'text',
-		                'title'    => __( 'Button 1 Text', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => 'Download',
-		                'required' => array( 'calltoaction-btn1-toggle', '=', true ),
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction-btn1-url',
-		                'type'     => 'text',
-		                'title'    => __( 'Button 1 URL', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => '#',
-		                'required' => array( 'calltoaction-btn1-toggle', '=', true ),
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction-btn2-toggle',
-		                'type'     => 'switch',
-		                'default'  => true,
-		                'title'    => __( 'Toggle Button 2', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		            ),
-
-		             array(
-		                'id'       => 'calltoaction-btn2-text',
-		                'type'     => 'text',
-		                'title'    => __( 'Button 2 Text', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => 'Download',
-		                'required' => array( 'calltoaction-btn2-toggle', '=', true ),
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction-btn2-url',
-		                'type'     => 'text',
-		                'title'    => __( 'Button 2 URL', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => '#',
-		                'required' => array( 'calltoaction-btn2-toggle', '=', true ),
-		            ),
-            
-                    array(
-                    'id'          => 'calltoaction-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    ),
-            
-                    array(
-                    'id'       => 'calltoaction-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the call-to-action section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-// -> START Call to Action 2
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Call to Action 2', 'integral' ),
-        'id'     => 'calltoaction2',
-        'icon'   => 'el el-share-alt',
-        'desc'  => __( 'Create a call-to-action in horizontal layout.', 'integral' ),
-        'fields' => array(
-
-                    array(
-                        'id'       => 'calltoaction2-bg',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', 'integral' ),
-                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Call to Action section.', 'integral' ),
-                        'output'   => array('.calltoaction2'),
-                        'compiler'    => 'true',
-                        'default'  => array(
-                                            'background-color' => '',
-                                        )
-
-                    ),
-
-                    array(
-                        'id'       => 'calltoaction2-title',
-                        'type'     => 'text',
-                        'title'    => __( 'Title', 'integral' ),
-                        'default'  => 'Build Your Website with Integral',
-		            ),
-
-                    array(
-                        'id'       => 'calltoaction2-text',
-                        'type'     => 'editor',
-                        'title'    => __( 'Content', 'integral' ),
-                        'desc'    => __( 'Custom HTML allowed', 'integral' ),
-                        'default'   => 'Lorem ipsum veniam adipisicing cupidatat dolor do adipisicing commodo.',
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction2-btn-text',
-		                'type'     => 'text',
-		                'title'    => __( 'Button Text', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => 'Download',
-		            ),
-
-		            array(
-		                'id'       => 'calltoaction2-btn-url',
-		                'type'     => 'text',
-		                'title'    => __( 'Button URL', 'integral' ),
-		                'subtitle' => __( '', 'integral' ),
-		                'default'  => '#',
-		            ),
-
-		            
-                    array(
-                        'id'          => 'calltoaction2-custom-class',
-                        'type'        => 'text',
-                        'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                        'title' => __( 'Custom Class', 'integral' ),
-                        'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    ),
-            
-                    array(
-                        'id'       => 'calltoaction2-section-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Disable Section', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the call-to-action section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-// -> START About
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'About', 'integral' ),
-        'id'     => 'about',
-        'icon'   => 'el el-question-sign',
-        'fields' => array(
-
-
-					array(
-                        'id'       => 'about-title',
-                        'type'     => 'text',
-                        'title'    => __( 'Title', 'integral' ),
-                        'default'  => 'About',
-		            ),
-            
-                    array(
-                        'id'       => 'about-title-icon',
-                        'type'     => 'text',
-                        'title'    => __( 'Title Icon', 'integral' ),
-                        'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
-                        'default'  => 'fa-user',
-                    ),
-
-                    array(
-                        'id'       => 'about-subtitle',
-                        'type'     => 'editor',
-                        'title'    => __( 'Subtitle', 'integral' ),
-                        'default'  => 'Bla bla bla',
-                    ),
-
-                    array(
-                        'id'          => 'about-text',
-                        'type'        => 'select',
-                        'title' => __( 'Content', 'integral' ),
-                        'desc'    => __( 'Select the page you want to pull content from to populate this section', 'integral' ),
-                        'data'     => 'pages',
-                        
-                    ),
-            
-                    array(
-                        'id'          => 'about-custom-class',
-                        'type'        => 'text',
-                        'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                        'title' => __( 'Custom Class', 'integral' ),
-                        'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                        'default' => 'no-padding-bottom',
-                    ),
-            
-                    array(
-                        'id'       => 'about-section-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Disable Section', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the about section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-    // -> START Skills
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Skills', 'integral' ),
-        'id'     => 'skills',
-        'icon'   => 'el el-tasks',
-        'fields' => array(
-
-
-					array(
-                        'id'       => 'skills-title',
-                        'type'     => 'text',
-                        'title'    => __( 'Title', 'integral' ),
-                        'default'  => 'Skills',
-		            ),
-
-		            array(
-                        'id'          => 'skills-text',
-                        'type'        => 'select',
-                        'title' => __( 'Content', 'integral' ),
-                        'desc'    => __( 'Select the page you want to pull content from to populate this section', 'integral' ),
-                        'data'     => 'pages',
-                        
-                    ),
-
-                    //Skill 1
-		   			array(
-                        'id'       => 'skillsection1-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 1', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill1-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                        'default'     => 'Skill 1',
-                    ),
-
-                   array(
-                        'id'       => 'skill1-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#5cb85c',
-                    ),
-
-                   array(
-                        'id'            => 'skill1-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'default'       => 40,
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection1-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-            
-                    //Skill 2
-                    array(
-                        'id'       => 'skillsection2-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 2', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill2-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                        'default'     => 'Skill 2',
-                    ),
-
-                   array(
-                        'id'       => 'skill2-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#5bc0de',
-                    ),
-
-                   array(
-                        'id'            => 'skill2-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'default'       => 60,
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection2-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-            
-                    //Skill 3
-                    array(
-                        'id'       => 'skillsection3-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 3', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill3-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                        'default'     => 'Skill 3',
-                    ),
-
-                   array(
-                        'id'       => 'skill3-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#f0ad4e',
-                    ),
-
-                   array(
-                        'id'            => 'skill3-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'default'       => 80,
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection3-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-
-		            
-                    //Skill 4
-                    array(
-                        'id'       => 'skillsection4-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 4', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill4-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                        'default'     => 'Skill 4',
-                    ),
-
-                   array(
-                        'id'       => 'skill4-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#d9534f',
-                    ),
-
-                   array(
-                        'id'            => 'skill4-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'default'       => 100,
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection4-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-            
-                    //Skill 5
-                    array(
-                        'id'       => 'skillsection5-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 5', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill5-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                    ),
-
-                   array(
-                        'id'       => 'skill5-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#333333',
-                    ),
-
-                   array(
-                        'id'            => 'skill5-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection5-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-            
-                    //Skill 6
-                    array(
-                        'id'       => 'skillsection6-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Skill 6', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skill6-name',
-                        'type'        => 'text',
-                        'title' => __( 'Skill Name', 'integral' ),
-                    ),
-
-                   array(
-                        'id'       => 'skill6-color',
-                        'type'     => 'color',
-                        'title'    => __( 'Skill Color', 'integral' ),
-                        'subtitle' => __( 'Pick a color for the skill', 'integral' ),
-                        'default'     => '#333333',
-                    ),
-
-                   array(
-                        'id'            => 'skill6-percent',
-                        'type'          => 'slider',
-                        'title'         => __( 'Skill Level', 'integral' ),
-                        'min'           => 1,
-                        'step'          => 1,
-                        'max'           => 100,
-                        'display_value' => 'label'
-                    ),
-                    
-                    array(
-                        'id'       => 'skillsection6-end',
-                        'type'     => 'section',
-                        'indent'   => false, 
-	           	 	),
-            
-                    array(
-                        'id'          => 'skills-custom-class',
-                        'type'        => 'text',
-                        'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                        'title' => __( 'Custom Class', 'integral' ),
-                        'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                        'default' => 'no-padding-bottom',
-                    ),
-            
-                    array(
-                    'id'       => 'skills-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the skills section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-
- // -> START Team
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Team', 'integral' ),
-        'id'     => 'team',
-        'icon'   => 'el el-group',
-        'fields' => array(
-
-
-					array(
-	                'id'       => 'team-title',
-	                'type'     => 'text',
-	                'title'    => __( 'Title', 'integral' ),
-	                'default'  => 'Our Team',
-		            ),
-
-		   			array(
-                    'id'       => 'team-create',
-                    'type'     => 'raw',
-                    'title'    => __( 'Add Team Members', 'integral' ),
-                    'content' => __( 'Team members are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Team Section]. Add widgets entitled [Integral - Team Member Widget] to this area to add team members. Add as many as you like.', 'integral' ),
-
-                    ),
-            
-                    array(
-                    'id'          => 'team-layout',
-                    'type'        => 'select',
-                    'title' => __( 'Team Members Layout', 'integral' ),
-                    'subtitle' => __( 'Configure the number of team members to appear in a row. Additional team members will automatically default to the next row.', 'integral' ),
-                    'options'     => array(
-                        '2'             => __( '6 per row (6 columns)', 'integral' ),
-                        '3'             => __( '4 per row (4 columns)', 'integral' ),
-                        '4'             => __( '3 per row (3 columns)', 'integral' ),
-                        '6'             => __( '2 per row (2 columns)', 'integral' ),
-                        '12'             => __( '1 per row (1 column)', 'integral' ),
-                    ),
-                    'default' => '4'
-                    ),
-            
-                    array(
-                            'id'          => 'team-custom-class',
-                            'type'        => 'text',
-                            'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                            'title' => __( 'Custom Class', 'integral' ),
-                            'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                            'default' => 'no-padding-bottom',
-                    ),
-
-                    array(
-                            'id'       => 'team-section-toggle',
-                            'type'     => 'switch',
-                            'default'  => true,
-                            'title'    => __( 'Disable Section', 'integral' ),
-                            'subtitle' => __( 'Toggle off to disable the team members section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-    // -> START Blog
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Blog', 'integral' ),
-        'id'     => 'blog',
-        'icon'   => 'el el-wordpress',
-        'fields' => array(
-
-
-					array(
-	                'id'       => 'blog-title',
-	                'type'     => 'text',
-	                'title'    => __( 'Title', 'integral' ),
-	                'default'  => 'From Our Blog',
-		            ),
-            
-                    array(
-                    'id'          => 'blog-posts',
-                    'type'        => 'select',
-                    'title' => __( 'Blog Posts', 'integral' ),
-                    'subtitle' => __( 'Set the number of latest posts to display.', 'integral' ),
-                    'options'     => array(
-                        '1'             => __( '1 post', 'integral' ),
-                        '2'             => __( '2 posts', 'integral' ),
-                        '3'             => __( '3 posts', 'integral' ),
-                        '4'             => __( '4 posts', 'integral' ),
-                        '5'             => __( '5 posts', 'integral' ),
-                        '6'             => __( '6 posts', 'integral' ),
-                        '7'             => __( '7 posts', 'integral' ),
-                        '8'             => __( '8 posts', 'integral' ),
-                        '9'             => __( '9 posts', 'integral' ),
-                        '10'             => __( '10 posts', 'integral' ),
-                        '11'             => __( '11 posts', 'integral' ),
-                        '12'             => __( '12 posts', 'integral' ),
-                    ),
-                    'default' => '3'
-                    ),
-            
-                    array(
-                    'id'          => 'blog-layout',
-                    'type'        => 'select',
-                    'title' => __( 'Blog Posts Layout', 'integral' ),
-                    'subtitle' => __( 'Configure the posts layout.', 'integral' ),
-                    'options'     => array(
-                        '3'             => __( '4 per row (4 columns)', 'integral' ),
-                        '4'             => __( '3 per row (3 columns)', 'integral' ),
-                        '6'             => __( '2 per row (2 columns)', 'integral' ),
-                        '12'             => __( '1 per row (1 column)', 'integral' ),
-                    ),
-                    'default' => '4'
-                    ),
-            
-                    array(
-                            'id'          => 'blog-below-text',
-                            'type'        => 'editor',
-                            'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                            'title' => __( 'Content Area Below Posts', 'integral' ),
-                            'subtitle'       => __( 'Use this field to display content or links to your blog.', 'integral' ),
-                            'default' => '<p class="text-center"><a href="blog" class="btn btn-md btn-inverse">Read the blog &#8594;</a></p>'
-                    ),
-            
-                    array(
-                            'id'          => 'blog-custom-class',
-                            'type'        => 'text',
-                            'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                            'title' => __( 'Custom Class', 'integral' ),
-                            'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    ),
-
-                    array(
-                            'id'       => 'blog-section-toggle',
-                            'type'     => 'switch',
-                            'default'  => true,
-                            'title'    => __( 'Disable Section', 'integral' ),
-                            'subtitle' => __( 'Toggle off to disable the Blog members section.', 'integral' ),
-                    ),
-
-        )
-    ) );
-
-
-// -> START tweets
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Tweets', 'integral' ),
-        'id'     => 'tweets',
-        'icon'   => 'el el-twitter',
-        'desc'   => __( 'Display your latest tweets. In order for this feature to function you must have the TweetScroll Widget plugin installed which came pre-packaged with Integral.', 'integral' ),
-        'fields' => array(
-            
-            array(
-                'id'       => 'tweets-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Sweets Scroll', 'integral' ),
-                'content' => __( 'Your latest tweets can be displayed by using the TweetScroll Widget plugin. Go to APPEARANCE > Widgets and locate [Homepage Tweets Section]. Add the widget entitled [TweetScroll] to this area and don\'t forget to configure it.', 'integral' ),
-
-                ),
-            
-            array(
-                    'id'       => 'tweets-bg',
-                    'type'     => 'background',
-                    'title'    => __( 'Background', 'integral' ),
-                    'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Tweets section.', 'integral' ),
-                    'output'   => array('.tweets'),
-                    'compiler'    => 'true',
-                    'default'  => array(
-                                        'background-color' => '',
-                                    )
-
-            ),
-            
-            array(
-                'id'       => 'tweets-typrography',
-                'type'     => 'typography',
-                'title'    => __( 'Text Styles', 'integral' ),
-                'subtitle' => __( 'Change the size, color and style of the font.', 'integral' ),
-                'subsets'       => false,
-                'font-style'    => true,
-                'font-size'    => true,
-                'text-align'    => false,
-                'line-height'    => false,
-                'color'       => true,
-                'text-transform'   => true,
-                'output'	=> array('.tweets, .tweets li a'),
-                'default'  => array(
-                    'color'       => '#fff',
-                  )
-            ),
-            
-            array(
-                    'id'          => 'tweets-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-            ),
-            
-            array(
-                    'id'       => 'tweets-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the tweets section.', 'integral' ),
+                'default'  => '&copy; 2016 All Rights Reserved | Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a> | Made with &#10084; by <a href="https://www.themely.com" target="_blank">Themely</a>',
             ),
 
-        )
-    ) );
+            array(
+                'id'       => 'footer-section-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Disable Section', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the footer section.', 'integral' ),
+            ),
 
-
-// -> START Newsletter
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Newsletter', 'integral' ),
-        'id'     => 'newsletter',
-        'icon'   => 'el el-bullhorn',
-        'fields' => array(
-
-                    array(
-                        'id'       => 'newsletter-bg',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', 'integral' ),
-                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Newsletter section.', 'integral' ),
-                        'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
-                        'output'   => array('.newsletter'),
-                        'compiler'    => 'true',
-                        'default'  => array(
-                                    'background-image' => get_template_directory_uri().'/images/bg-newsletter.jpg',
-                                    'background-size' => 'cover',
-                                )
-                    ),
-            
-                    array(
-                        'id'       => 'newsletter-padding',
-                        'type'     => 'spacing',
-                        'title'    => __( 'Section Padding', 'integral' ),
-                        'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of newsletter section.', 'integral' ),
-                        'output'   => array('.newsletter'),
-                        'compiler'    => 'true',
-                        'mode'    => 'padding',
-                        'units'     => array('%', 'px'),
-                        'units_extended'   => 'true',
-                        'display_units'   => 'true',
-                        'left'   => 'false',
-                        'right'   => 'false',
-                        'default'            => array(
-                                'padding-top'     => '100px', 
-                                'padding-bottom'  => '110px', 
-                                'units'          => 'px', 
-                            )
-                    ),
-            
-                    array(
-                        'id'       => 'newsletter-overlay-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Background Overlay', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
-                    ),
-            
-                    array(
-                        'id'    => 'newsletter-overlay-info',
-                        'type'  => 'info',
-                        'style' => 'info',
-                        'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
-
-                    ),
-
-                    array(
-                                    'id'       => 'newsletter-parallax-toggle',
-                                    'type'     => 'switch',
-                                    'default'  => true,
-                                    'title'    => __( 'Parallax Effect', 'integral' ),
-                                    'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
-                                ),
-
-	                array(
-	                'id'       => 'newsletter-title',
-	                'type'     => 'text',
-	                'title'    => __( 'Title', 'integral' ),
-	                'default'  => 'Newsletter Form',
-		            ),
-
-		            array(
-	                'id'       => 'newsletter-text',
-	                'type'     => 'editor',
-	                'title'    => __( 'Content', 'integral' ),
-                    'desc'    => __( 'Custom HTML allowed', 'integral' ),
-                    'default'   => 'Display a small newsletter subscription form. Integrates with services such as MailChimp and ConstantContact.',
-		            ),
-            
-                    array(
-	                'id'       => 'mailchimp-code',
-	                'type'     => 'textarea',
-	                'title'    => __( 'Newsletter Form Code', 'integral' ),
-                    'subtitle' => __( 'Paste form code here. Styling is supported for Mailchimp and ConstantContact. You can override form styling in the themes default stylesheet (styles.css) located under APPEARANCE > Editor.', 'integral' ),
-                    'desc'    => __( 'Custom HTML allowed', 'integral' ),
-	                'default'  => '<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup"><form id="mc-embedded-subscribe-form" class="validate" action="//themely.us12.list-manage.com/subscribe/post?u=96d68578362e503cedd707b57&amp;id=7629c7ed4b" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
-<div id="mc_embed_signup_scroll">
-<div class="mc-field-group"><input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="" placeholder="Email Address" /></div>
-<div id="mce-responses" class="clear"></div>
-<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-<div style="position: absolute; left: -5000px;"><input tabindex="-1" name="b_96d68578362e503cedd707b57_7629c7ed4b" type="text" value="" /></div>
-<div class="clear"><input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="Subscribe" /></div>
-</div>
-</form></div>
-<!--End mc_embed_signup-->',
-		            ),
-            
-                    array(
-                    'id'          => 'newsletter-custom-class',
-                    'type'        => 'text',
-                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                    'title' => __( 'Custom Class', 'integral' ),
-                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    ),
-            
-                    array(
-                    'id'       => 'newsletter-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the newsletter section.', 'integral' ),
-                    ),
-		            
-
-        )
-    ) );
-
-// -> START Contact
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Contact', 'integral' ),
-        'id'     => 'contact',
-        'icon'   => 'el el-envelope',
-        'fields' => array(
-
-	                array(
-                        'id'       => 'contact-title',
-                        'type'     => 'text',
-                        'title'    => __( 'Title', 'integral' ),
-                        'default'  => 'Contact',
-		            ),
-                    array(
-                        'id'       => 'contact-title-icon',
-                        'type'     => 'text',
-                        'title'    => __( 'Title Icon', 'integral' ),
-                        'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
-                        'default'  => 'fa-envelope',
-                    ),
-                    array(
-                        'id'       => 'contact-subtitle',
-                        'type'     => 'editor',
-                        'title'    => __( 'Subtitle', 'integral' ),
-                        'default'  => 'Bla bla bla',
-                    ),
-		            array(
-                        'id'          => 'contact-text',
-                        'type'        => 'select',
-                        'title' => __( 'Content', 'integral' ),
-                        'subtitle'    => __( 'Select the page you want to pull content from to populate this section', 'integral' ),
-                        'data'     => 'pages',
-                        
-                    ),
-		            array(
-                        'id'       => 'contactinfo-start',
-                        'type'     => 'section',
-                        'title'    => __( 'Contact Info', 'integral' ),
-                        'indent'   => true, 
-	           	 	),
-                    array(
-                        'id'       => 'contactinfo-title',
-                        'type'     => 'text',
-                        'title'    => __( 'Title', 'integral' ),
-                        'default'  => 'Contact Info',
-		            ),
-		            array(
-                        'id'       => 'contact-phone',
-                        'type'     => 'text',
-                        'title'    => __( 'Phone Number', 'integral' ),
-                        'default'  => '+1 323 456 7891',
-                        ),
-		            array(
-                        'id'       => 'contact-email',
-                        'type'     => 'text',
-                        'title'    => __( 'Email Address', 'integral' ),
-                        'default'  => 'hello@yourwebsite.com',
-		            ),
-		            array(
-                        'id'       => 'contact-address',
-                        'type'     => 'textarea',
-                        'title'    => __( 'Location Address', 'integral' ),
-                        'default'  => '1 Pacific Ave, Suite 100
-                        Santa Monica, CA 90210
-                        United States',
-		            ),
-
-		            array(
-	                    'id'          => 'contact-facebook',
-	                    'type'        => 'text',
-	                    'title' => __( 'Facebook URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-
-	                array(
-	                    'id'          => 'contact-twitter',
-	                    'type'        => 'text',
-	                    'title' => __( 'Twitter URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-
-	                array(
-	                    'id'          => 'contact-googleplus',
-	                    'type'        => 'text',
-	                    'title' => __( 'Google+ URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-
-	                array(
-	                    'id'          => 'contact-github',
-	                    'type'        => 'text',
-	                    'title' => __( 'Github URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-
-	                array(
-	                    'id'          => 'contact-behance',
-	                    'type'        => 'text',
-	                    'title' => __( 'Behance URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-            
-                    array(
-	                    'id'          => 'contact-linkedin',
-	                    'type'        => 'text',
-	                    'title' => __( 'Linkedin URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-            
-                    array(
-	                    'id'          => 'contact-instagram',
-	                    'type'        => 'text',
-	                    'title' => __( 'Instagram URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-            
-                    array(
-	                    'id'          => 'contact-youtube',
-	                    'type'        => 'text',
-	                    'title' => __( 'Youtube URL', 'integral' ),
-                        'default'  => '#',
-	                ),
-            
-		            array(
-                        'id'     => 'contactinfo-end',
-                        'type'   => 'section',
-                        'indent' => false,
-	          		 ),
-
-                     array(
-                        'id'          => 'contact-form-code',
-                        'type'        => 'text',
-                        'title' => __( 'Contact Form 7 Shortcode', 'integral' ),
-                        'subtitle'   => __( 'Make sure you have installed the Contact Form 7 plugin and created a form. To create a form go to CONTACT > Add New. Then paste the shortcode in the field on the right.', 'integral' ),
-                        'description' => __( 'Paste the shortcode in the field above.', 'integral' ),
-                        'default'  => '[contact-form-7 id="1" title="Contact form 1"]'
-                    ),
-            
-                    array(
-                        'id'          => 'contact-custom-class',
-                        'type'        => 'text',
-                        'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
-                        'title' => __( 'Custom Class', 'integral' ),
-                        'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    ),
-            
-                    array(
-                        'id'       => 'contact-section-toggle',
-                        'type'     => 'switch',
-                        'default'  => true,
-                        'title'    => __( 'Disable Section', 'integral' ),
-                        'subtitle' => __( 'Toggle off to disable the contact section.', 'integral' ),
-                    ),
-
-
-        )
-    ) );
-
-
-// -> START Footer
-Redux::setSection( $opt_name, array(
-    'title'  => __( 'Footer', 'integral' ),
-    'id'     => 'copyright',
-    'icon'   => 'el el-lock',
-    'fields' => array(
-
-        array(
-            'id'       => 'copyright-text',
-            'type'     => 'editor',
-            'title'    => __( 'Copyright Text', 'integral' ),
-                'desc'    => __( 'Custom HTML allowed', 'integral' ),
-            'default'  => '&copy; 2016 All Rights Reserved | Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a> | Made with &#10084; by <a href="https://www.themely.com" target="_blank">Themely</a>',
-        ),
-
-        array(
-            'id'       => 'footer-section-toggle',
-            'type'     => 'switch',
-            'default'  => true,
-            'title'    => __( 'Disable Section', 'integral' ),
-            'subtitle' => __( 'Toggle off to disable the footer section.', 'integral' ),
-        ),
-
-) ) );
-
-// -> START Custom Code
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Custom Code', 'integral' ),
-        'id'     => 'customcode',
-        'icon'   => 'el el-wordpress',
-        'desc'  => __( 'Enter custom Javascript or CSS code in your theme header and footer.', 'integral' ),
-        'fields' => array(
-
-	                array(
-		                'id'         => 'customcode-header',
-		                'type'       => 'ace_editor',
-		                'full_width' => true,
-		                'title'      => __( 'Header Code', 'integral' ),
-		                'subtitle'   => __( 'This code will be included in the theme header', 'integral' ),
-		                'mode'       => 'php',
-		                'theme'      => 'chrome'
-		            ),
-					array(
-		                'id'         => 'customcode-footer',
-		                'type'       => 'ace_editor',
-		                'full_width' => true,
-		                'title'      => __( 'Footer Code', 'integral' ),
-		                'subtitle'   => __( 'This code will be included in the theme footer', 'integral' ),
-		                'mode'       => 'php',
-		                'theme'      => 'chrome'
-		            ),
-		            array(
-		                'id'         => 'customcode-css',
-		                'type'       => 'ace_editor',
-		                'full_width' => true,
-		                'title'      => __( 'Custom CSS', 'integral' ),
-		                'subtitle'   => __( 'Enter custom CSS to override default styles', 'integral' ),
-		                'mode'       => 'css',
-		                'theme'      => 'monokai'
-		            ),
-		           
-        )
-    ) );
+    ) ) );
 
     /*
      * <--- END SECTIONS
