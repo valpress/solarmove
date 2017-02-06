@@ -13,8 +13,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <?php if ($integral['page-3-5-title']) { ?><h2><?php echo $integral['page-3-5-title']; ?></h2><?php } ?>
-                <?php if ($integral['page-3-5-text']) { ?><p><?php echo $integral['page-3-5-text']; ?></p><?php } ?>
+                <?php if ($integral['page-3-5-title']) { ?><h2><?php echo __($integral['page-3-5-title'], 'solarmove'); ?></h2><?php } ?>
+                <?php if ($integral['page-3-5-text']) { ?><p><?php echo __($integral['page-3-5-text'], 'solarmove'); ?></p><?php } ?>
             </div>
             <div class="col-md-12">
                 <table class="battery-table">

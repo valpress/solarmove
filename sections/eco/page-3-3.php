@@ -14,8 +14,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 heading">
-                <?php if ($integral['page-3-3-title']) { ?><h2><?php echo $integral['page-3-3-title']; ?></h2><?php } ?>
-                <?php if ($integral['page-3-3-subtitle']) { ?><p><?php echo $integral['page-3-3-subtitle']; ?></p><?php } ?>
+                <?php if ($integral['page-3-3-title']) { ?><h2><?php echo __($integral['page-3-3-title'], 'solarmove'); ?></h2><?php } ?>
+                <?php if ($integral['page-3-3-subtitle']) { ?><p><?php echo __($integral['page-3-3-subtitle'], 'solarmove'); ?></p><?php } ?>
             </div>
         </div>
         <?php if ( is_active_sidebar( 'page-3-3-column-widget' ) ) : ?>

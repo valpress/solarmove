@@ -23,40 +23,40 @@
 			<div class="item active sm_carousel_layout-slide-1">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1><?php echo $integral['page-2-2-slide-1-title']; ?></h1>
-						<p><?php echo $integral['page-2-2-slide-1-subtitle']; ?></p>
+						<h1><?php echo __($integral['page-2-2-slide-1-title'], 'solarmove'); ?></h1>
+						<p><?php echo __($integral['page-2-2-slide-1-subtitle'], 'solarmove'); ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="item sm_carousel_layout-slide-2">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1><?php echo $integral['page-2-2-slide-2-title']; ?></h1>
-						<p><?php echo $integral['page-2-2-slide-2-subtitle']; ?></p>
+						<h1><?php echo __($integral['page-2-2-slide-2-title'], 'solarmove'); ?></h1>
+						<p><?php echo __($integral['page-2-2-slide-2-subtitle'], 'solarmove'); ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="item sm_carousel_layout-slide-3">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1><?php echo $integral['page-2-2-slide-3-title']; ?></h1>
-						<p><?php echo $integral['page-2-2-slide-3-subtitle']; ?></p>
+						<h1><?php echo __($integral['page-2-2-slide-3-title'], 'solarmove'); ?></h1>
+						<p><?php echo __($integral['page-2-2-slide-3-subtitle'], 'solarmove'); ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="item sm_carousel_layout-slide-4">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1><?php echo $integral['page-2-2-slide-4-title']; ?></h1>
-						<p><?php echo $integral['page-2-2-slide-4-subtitle']; ?></p>
+						<h1><?php echo __($integral['page-2-2-slide-4-title'], 'solarmove'); ?></h1>
+						<p><?php echo __($integral['page-2-2-slide-4-subtitle'], 'solarmove'); ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="item sm_carousel_layout-slide-5">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1><?php echo $integral['page-2-2-slide-5-title']; ?></h1>
-						<p><?php echo $integral['page-2-2-slide-5-subtitle']; ?></p>
+						<h1><?php echo __($integral['page-2-2-slide-5-title'], 'solarmove'); ?></h1>
+						<p><?php echo __($integral['page-2-2-slide-5-subtitle'], 'solarmove'); ?></p>
 					</div>
 				</div>
 			</div>
