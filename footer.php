@@ -8,7 +8,24 @@
  */
 ?>
 <?php global $integral; ?>
-<?php if($integral['footer-section-toggle']==1) { ?>
+<?php if($integral['links-section-toggle']==1) { ?>
+<section id="links" class="links dark <?php echo $integral['links-custom-class']; ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <?php if ($integral['links-title']) { ?><h1><?php echo __($integral['links-title'], 'solarmove'); ?></h1><?php } ?>
+            </div>
+            <?php if ( is_active_sidebar( 'link-widget' ) ) : ?>
+            <div class="col-md-6">
+                <div class="row">
+                    <?php dynamic_sidebar( 'link-widget' ); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section><!--links-->
+<?php } ?>
 <section class="copyright dark">
 	<div class="container">
 		<div class="row">
@@ -22,7 +39,6 @@
 		</div>
 	</div>
 </section>
-<?php } ?>
 <?php wp_footer(); ?>
 <?php echo "\n<!--Custom Footer Code Start-->\n".$integral['customcode-footer']."\n<!--Custom Footer Code End-->\n"; ?>
 <?php get_template_part('sections/custom'); ?>

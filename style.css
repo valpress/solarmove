@@ -427,8 +427,13 @@ table .row-header {
   padding-right: 30px;
 }
 
-table .fa {
+table .fa-green {
   color: #0B8340;
+  font-size: 18px;
+}
+
+table .fa-red {
+  color: #FF0000;
   font-size: 18px;
 }
 

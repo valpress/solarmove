@@ -12,16 +12,17 @@ class Solarmove_Table_Widget extends WP_Widget {
      * @return void
      **/
     function __construct() {
-        $widget_ops = array( 'classname' => 'wcp_image', 'description' => 'Add a row.' );
+        $widget_ops = array( 'classname' => 'wcp_image', 'description' => 'Add a table row to the table section.' );
         parent::__construct( 'Solarmove_table', 'Solarmove - Table Widget', $widget_ops );
         
-        //setup default widget data
-		$this->defaults = array(
-			'title'         => 'Row Title',
-			'text'        => 'fa-code',
-			'image_url'    => '',
-			'textarea'   	=> 'My row title',
-		);
+        // Setup default widget data
+        $this->defaults = array(
+          'column_1_text'    => 'Column 1 text',
+          'column_2_text'    => 'Column 2 text',
+          'column_3_text'    => 'Column 3 text',
+          'column_4_text'    => 'Column 4 text',
+          'column_5_text'    => 'Column 5 text',
+        );
     }
 
     /**
@@ -34,32 +35,34 @@ class Solarmove_Table_Widget extends WP_Widget {
     function widget( $args, $instance ) {
        wp_reset_query();
        extract( $args, EXTR_SKIP );
-       // these are the widget options
-       $title = apply_filters('widget_title', $instance['title']);
-       $text = $instance['text'];
-       $image_url = $instance['image_url'];
-       $textarea = apply_filters( 'widget_textarea', empty( $instance['textarea'] ) ? '' : $instance['textarea'], $instance );
+
+       $column_1_text = apply_filters('widget_title', $instance['column_1_text']);
+       $column_2_text = apply_filters('widget_title', $instance['column_2_text']);
+       $column_3_text = apply_filters('widget_title', $instance['column_3_text']);
+       $column_4_text = apply_filters('widget_title', $instance['column_4_text']);
+       $column_5_text = apply_filters('widget_title', $instance['column_5_text']);
+
        echo $before_widget;
-       // Display the widget
        echo '';
-
-       // Check if title is set
-       if ( $title ) {
-          echo $before_title . $title . $after_title;
-       }
-        
-       // Check if text is set
-       if( $text ) {
-          echo '<span class="fa '.$text.' featureicon"></span>';
-       }
-       if( !$text && $image_url) {
-          echo '<img class="fimage" src="'.$image_url.'">';
-       }
-
-       // Check if textarea is set
-       if( $textarea ) { echo wpautop($textarea); }
+       $this->format($column_1_text);
+       $this->format($column_2_text);
+       $this->format($column_3_text);
+       $this->format($column_4_text);
+       $this->format($column_5_text);
        echo '';
        echo $after_widget;
+    }
+
+    function format($text) {
+      if ($text) {
+        if ($text == 'yes') {
+          echo '<td><i class="fa fa-green fa-check-circle" aria-hidden="true"></i></td>';
+        } else if ($text == 'no') {
+          echo '<td><i class="fa fa-red fa-times-circle" aria-hidden="true"></i></td>';
+        } else {
+          echo '<td>' . $text . '</td>';
+        }
+      }
     }
 
     /**
@@ -71,16 +74,12 @@ class Solarmove_Table_Widget extends WP_Widget {
      * @return array The validated and (if necessary) amended settings
      **/
     function update( $new_instance, $old_instance ) {
-
-        // update logic goes here
-    	$instance = $old_instance;
-          // Fields
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['text'] = strip_tags($new_instance['text']);
-		$instance['image_url'] = strip_tags($new_instance['image_url']);
-		if ( current_user_can('unfiltered_html') )
-			$instance['textarea'] =  $new_instance['textarea'];
-		else $instance['textarea'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['textarea']) ) );
+        $instance = $old_instance;
+        $instance['column_1_text'] = strip_tags($new_instance['column_1_text']);
+        $instance['column_2_text'] = strip_tags($new_instance['column_2_text']);
+        $instance['column_3_text'] = strip_tags($new_instance['column_3_text']);
+        $instance['column_4_text'] = strip_tags($new_instance['column_4_text']);
+        $instance['column_5_text'] = strip_tags($new_instance['column_5_text']);
 
         return $instance;
     }
@@ -94,29 +93,25 @@ class Solarmove_Table_Widget extends WP_Widget {
     function form( $instance ) {
         $instance = wp_parse_args( (array) $instance, $this->defaults );
 ?>
-	<p>
-        <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Column Title', 'integral'); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $instance['title']; ?>" />
+    <p>
+        <label for="<?php echo $this->get_field_id('column_1_text'); ?>"><?php _e('Column 1 text', 'integral'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('column_1_text'); ?>" name="<?php echo $this->get_field_name('column_1_text'); ?>" type="text" value="<?php echo $instance['column_1_text']; ?>" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Column Icon Class', 'integral'); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>" type="text" value="<?php echo $instance['text']; ?>" />
-        <small><?php _e('Copy and paste the required icon class from the', 'integral'); ?> <a href="<?php echo esc_url('https://fortawesome.github.io/Font-Awesome/cheatsheet/'); ?>" target="_blank"><?php _e('Fontawesome Icons List', 'integral'); ?></a> <?php _e('and choose from 600+ icons.', 'integral'); ?></small>
+        <label for="<?php echo $this->get_field_id('column_2_text'); ?>"><?php _e('Column 2 text', 'integral'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('column_2_text'); ?>" name="<?php echo $this->get_field_name('column_2_text'); ?>" type="text" value="<?php echo $instance['column_2_text']; ?>" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_url'); ?>"><?php _e('Column Image', 'integral'); ?></label>
-        <br /><small><?php _e('Or instead of using an icon you can upload an image.', 'integral'); ?></small>
-        <input id="<?php echo $this->get_field_id('image_url'); ?>" type="text" class="image-url" name="<?php echo $this->get_field_name('image_url'); ?>" value="<?php echo $instance['image_url']; ?>" style="width: 100%;" />
-        <input data-title="Image in Widget" data-btntext="Select it" class="button upload_image_button" type="button" value="<?php _e('Upload','integral') ?>" />
-        <input data-title="Image in Widget" data-btntext="Select it" class="button clear_image_button" type="button" value="<?php _e('Clear','integral') ?>" />
-	</p>
-	<p class="img-prev">
-        <img src="<?php echo $instance['image_url']; ?>" style="max-width: 100%;">
+        <label for="<?php echo $this->get_field_id('column_3_text'); ?>"><?php _e('Column 3 text', 'integral'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('column_3_text'); ?>" name="<?php echo $this->get_field_name('column_3_text'); ?>" type="text" value="<?php echo $instance['column_3_text']; ?>" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('textarea'); ?>"><?php _e('Description text for the column', 'integral'); ?></label>
-        <textarea class="widefat" rows="5" id="<?php echo $this->get_field_id('textarea'); ?>" name="<?php echo $this->get_field_name('textarea'); ?>"><?php echo $instance['textarea']; ?></textarea>
-        <small><?php _e('No limit on the amount of text and HTML is allowed.', 'integral'); ?></small>
+        <label for="<?php echo $this->get_field_id('column_4_text'); ?>"><?php _e('Column 4 text', 'integral'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('column_4_text'); ?>" name="<?php echo $this->get_field_name('column_4_text'); ?>" type="text" value="<?php echo $instance['column_4_text']; ?>" />
+    </p>
+    <p>
+        <label for="<?php echo $this->get_field_id('column_5_text'); ?>"><?php _e('Column 5 text', 'integral'); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id('column_5_text'); ?>" name="<?php echo $this->get_field_name('column_5_text'); ?>" type="text" value="<?php echo $instance['column_5_text']; ?>" />
     </p>
 <?php
     }

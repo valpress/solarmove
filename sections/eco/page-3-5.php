@@ -16,38 +16,24 @@
                 <?php if ($integral['page-3-5-title']) { ?><h2><?php echo __($integral['page-3-5-title'], 'solarmove'); ?></h2><?php } ?>
                 <?php if ($integral['page-3-5-text']) { ?><p><?php echo __($integral['page-3-5-text'], 'solarmove'); ?></p><?php } ?>
             </div>
+            <?php if ( is_active_sidebar( 'page-3-5-table-widget' ) ) : ?>
             <div class="col-md-12">
                 <table class="battery-table">
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="active">Column 1</th>
+                            <th>Column 1</th>
                             <th>Column 2</th>
                             <th>Column 3</th>
+                            <th>Column 4</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="row-header">Row 1</td>
-                            <td class="active"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                            <td>Yes</td>
-                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="row-header">Row 2</td>
-                            <td class="active"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                            <td>No</td>
-                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="row-header">Row 3</td>
-                            <td class="active"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                            <td>Maybe</td>
-                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
-                        </tr>
+                        <?php dynamic_sidebar( 'page-3-5-table-widget' ); ?>
                     </tbody>
                 </table>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

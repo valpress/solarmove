@@ -537,7 +537,6 @@
                 'compiler' => 'true',
                 'options'  => array(
                     'Enabled'  => array(
-                        'hero' => 'Hero',
                         'page-1-0'   => 'Page 1.0',
                         'page-1-1'   => 'Page 1.1',
                         'page-1-2'   => 'Page 1.2',
@@ -553,6 +552,7 @@
                         'page-3-5'   => 'Page 3.5',
                         'page-4-0'   => 'Page 4.0',
                         'page-4-1'   => 'Page 4.1',
+                        'links'      => 'Links'
                     ),
                     'Disabled' => array(
                     ),
@@ -2882,169 +2882,19 @@
                 'title'    => __( 'Title', 'integral' ),
                 'default'  => 'Title',
             ),
-
             array(
-                'id'       => 'links-btn1-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 1', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn1-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 1 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn1-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn1-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 1 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn1-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn2-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 2', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn2-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 2 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn2-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn2-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 2 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn2-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn3-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 3', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn3-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 3 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn3-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn3-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 3 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn3-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn4-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 4', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn4-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 4 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => 'View Features',
-                'required' => array( 'links-btn4-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn4-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 4 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn4-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn5-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 5', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn5-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 5 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn5-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn5-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 5 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn5-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn6-toggle',
-                'type'     => 'switch',
-                'default'  => true,
-                'title'    => __( 'Toggle Button 6', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
-            ),
-
-            array(
-                'id'       => 'links-btn6-text',
-                'type'     => 'text',
-                'title'    => __( 'Button 6 Text', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn6-toggle', '=', true ),
-            ),
-
-            array(
-                'id'       => 'links-btn6-url',
-                'type'     => 'text',
-                'title'    => __( 'Button 6 URL', 'integral' ),
-                'subtitle' => __( '', 'integral' ),
-                'default'  => '',
-                'required' => array( 'links-btn6-toggle', '=', true ),
-            ),
-            
-            array(
-                    'id'       => 'links-section-toggle',
-                    'type'     => 'switch',
-                    'default'  => true,
-                    'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the links section.', 'integral' ),
+                'id'          => 'links-layout',
+                'type'        => 'select',
+                'title' => __( 'Link Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of links to appear in a row. Additional links will automatically default to the next row.', 'integral' ),
+                'options'     => array(
+                    '2'             => __( '6 per row (6 columns)', 'integral' ),
+                    '3'             => __( '4 per row (4 columns)', 'integral' ),
+                    '4'             => __( '3 per row (3 columns)', 'integral' ),
+                    '6'             => __( '2 per row (2 columns)', 'integral' ),
+                    '12'             => __( '1 per row (1 column)', 'integral' ),
+                ),
+                'default' => '2'
             )
         )
     ) );

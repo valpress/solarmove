@@ -51,10 +51,28 @@ function solarmove_widgets_init() {
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	) );
-    
+
+	register_sidebar( array(
+		'name' =>__( 'Page 3.5 Table Section', 'integral'),
+		'id' => 'page-3-5-table-widget',
+		'description' => __( 'The table section which appears on page 3.5. Drag and drop widgets titled [Solarmove - Table Widget] here to add table rows.', 'integral' ),
+		'before_widget' => '<tr>',
+		'after_widget' => '</tr>',
+	) ); 
+
+    $layout = $integral['links-layout'];
+	register_sidebar( array(
+		'name' =>__( 'Link Section', 'integral'),
+		'id' => 'link-widget',
+		'description' => __( 'The link section which appears at the bottom. Drag and drop widgets titled [Solarmove - Link Widget] here to add links.', 'integral' ),
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.'">',
+		'after_widget' => '</div>',
+	) );   
 }
 
 add_action( 'widgets_init', 'solarmove_widgets_init' );
 
 /** Load Custom Widgets **/
 require_once get_template_directory() . '/../solarmove/inc/widgets/column_widget.php';
+require_once get_template_directory() . '/../solarmove/inc/widgets/link_widget.php';
+require_once get_template_directory() . '/../solarmove/inc/widgets/table_widget.php';
