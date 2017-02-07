@@ -464,6 +464,25 @@ table.battery-table th.active, table.battery-table td.active {
   background-color: #F0F0F0;
 }
 
+.links {
+  padding: 33px 0;
+  border-bottom: solid 1px #222;
+  background-color: #111;
+}
+
+.links h1 {
+  padding:0px;
+  margin:0px;
+}
+
+.links a {
+  color: #888 !important;
+}
+
+.links a:hover {
+  color: #888 !important;
+  text-decoration: underline;
+}
 
 /* Triangle overlays */
 .triangle--left-bottom {

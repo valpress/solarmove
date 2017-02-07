@@ -553,25 +553,6 @@
                         'page-3-5'   => 'Page 3.5',
                         'page-4-0'   => 'Page 4.0',
                         'page-4-1'   => 'Page 4.1',
-                        'brands'   => 'Brands',
-                        'features'   => 'Features',
-                        'work'   => 'Work',
-                        'project-single'   => 'Project Single',
-                        'project-grid'   => 'Project Grid',
-                        'clients'   => 'Clients',
-                        'stats'   => 'Stats',
-                        'testimonials'   => 'Testimonials',
-                        'services'   => 'Services',
-                        'pricing-tables'   => 'Pricing Tables',
-                        'call-to-action2'   => 'Call to Action 2',
-                        'call-to-action'   => 'Call to Action 1',
-                        'about'   => 'About',
-                        'skills'   => 'Skills',
-                        'team'   => 'Team',
-                        'blog'   => 'Blog',
-                        'tweets'   => 'Tweets',
-                        'newsletter'   => 'Newsletter',
-                        'contact'   => 'Contact',
                     ),
                     'Disabled' => array(
                     ),
@@ -2888,30 +2869,185 @@
         )
     ) );
 
-    // -> START Footer
-    Redux::setSection( $opt_name, array(
-        'title'  => __( 'Footer', 'integral' ),
-        'id'     => 'copyright',
-        'icon'   => 'el el-lock',
-        'fields' => array(
 
-            array(
-                'id'       => 'copyright-text',
-                'type'     => 'editor',
-                'title'    => __( 'Copyright Text', 'integral' ),
-                    'desc'    => __( 'Custom HTML allowed', 'integral' ),
-                'default'  => '&copy; 2016 All Rights Reserved | Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a> | Made with &#10084; by <a href="https://www.themely.com" target="_blank">Themely</a>',
+    // -> START Links
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Links', 'integral' ),
+        'id'     => 'links',
+        'icon'   => 'el',
+        'fields' => array(
+             array(
+                'id'       => 'links-title',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Title',
             ),
 
             array(
-                'id'       => 'footer-section-toggle',
+                'id'       => 'links-btn1-toggle',
                 'type'     => 'switch',
                 'default'  => true,
-                'title'    => __( 'Disable Section', 'integral' ),
-                'subtitle' => __( 'Toggle off to disable the footer section.', 'integral' ),
+                'title'    => __( 'Toggle Button 1', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
             ),
 
-    ) ) );
+            array(
+                'id'       => 'links-btn1-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn1-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn2-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 2', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'links-btn2-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn2-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn3-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 3', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'links-btn3-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 3 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn3-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn3-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 3 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn3-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn4-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 4', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'links-btn4-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 4 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => 'View Features',
+                'required' => array( 'links-btn4-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn4-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 4 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn4-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn5-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 5', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'links-btn5-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 5 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn5-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn5-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 5 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn5-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn6-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 6', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'links-btn6-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 6 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn6-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'links-btn6-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 6 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '',
+                'required' => array( 'links-btn6-toggle', '=', true ),
+            ),
+            
+            array(
+                    'id'       => 'links-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the links section.', 'integral' ),
+            )
+        )
+    ) );
 
     /*
      * <--- END SECTIONS
