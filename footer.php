@@ -8,7 +8,6 @@
  */
 ?>
 <?php global $integral; ?>
-<?php if($integral['links-section-toggle']==1) { ?>
 <section id="links" class="links dark <?php echo $integral['links-custom-class']; ?>">
     <div class="container">
         <div class="row">
@@ -24,8 +23,7 @@
             <?php endif; ?>
         </div>
     </div>
-</section><!--links-->
-<?php } ?>
+</section>
 <section class="copyright dark">
 	<div class="container">
 		<div class="row">
