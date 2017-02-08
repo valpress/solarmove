@@ -33,6 +33,10 @@
                         <?php echo '&copy; ' . date('Y') . ' Solarmove &middot; All rights reserved &middot; Webdesign by <a href="http://valpress.ch" target="_blank">Valpress</a>' ?>
                     </p>
                 </div>
+                <div class="legal_mentions">
+                    <h5><?php echo __($integral['legal-mentions-title'], 'solarmove'); ?></h5>
+                    <p><?php echo __($integral['legal-mentions-text'], 'solarmove'); ?></p>
+                </div>
 			</div>
 		</div>
 	</div>

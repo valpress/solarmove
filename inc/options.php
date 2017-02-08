@@ -537,22 +537,28 @@
                 'compiler' => 'true',
                 'options'  => array(
                     'Enabled'  => array(
-                        'page-1-0'   => 'Page 1.0',
-                        'page-1-1'   => 'Page 1.1',
-                        'page-1-2'   => 'Page 1.2',
-                        'page-1-3'   => 'Page 1.3',
-                        'page-2-0'   => 'Page 2.0',
-                        'page-2-1'   => 'Page 2.1',
-                        'page-2-2'   => 'Page 2.2',
-                        'page-3-0'   => 'Page 3.0',
-                        'page-3-1'   => 'Page 3.1',
-                        'page-3-2'   => 'Page 3.2',
-                        'page-3-3'   => 'Page 3.3',
-                        'page-3-4'   => 'Page 3.4',
-                        'page-3-5'   => 'Page 3.5',
-                        'page-4-0'   => 'Page 4.0',
-                        'page-4-1'   => 'Page 4.1',
-                        'links'      => 'Links'
+                        'page-1-0'       => 'Page 1.0',
+                        'page-1-1'       => 'Page 1.1',
+                        'page-1-2'       => 'Page 1.2',
+                        'page-1-3'       => 'Page 1.3',
+                        'page-2-0'       => 'Page 2.0',
+                        'page-2-1'       => 'Page 2.1',
+                        'page-2-2'       => 'Page 2.2',
+                        'page-3-0'       => 'Page 3.0',
+                        'page-3-1'       => 'Page 3.1',
+                        'page-3-2'       => 'Page 3.2',
+                        'page-3-3'       => 'Page 3.3',
+                        'page-3-4'       => 'Page 3.4',
+                        'page-3-5'       => 'Page 3.5',
+                        'page-4-0'       => 'Page 4.0',
+                        'page-4-1'       => 'Page 4.1',
+                        'team-hero'      => 'Team (hero)',
+                        'team'           => 'Team',
+                        'mission'        => 'Mission',
+                        'values'         => 'Values',
+                        'sh-hero'        => 'Stakeholders (hero)',
+                        'links'          => 'Links',
+                        'legal-mentions' => 'Legal mentions'
                     ),
                     'Disabled' => array(
                     ),
@@ -2521,7 +2527,7 @@
                         'title'    => __( 'Button 1 Text', 'integral' ),
                         'subtitle' => __( '', 'integral' ),
                         'default'  => 'Download',
-                        'required' => array( 'page-1-1-btn1-toggle', '=', true ),
+                        'required' => array( 'page-3-5-btn1-toggle', '=', true ),
                     ),
 
                     array(
@@ -2530,7 +2536,7 @@
                         'title'    => __( 'Button 1 URL', 'integral' ),
                         'subtitle' => __( '', 'integral' ),
                         'default'  => '#',
-                        'required' => array( 'page-1-1-btn1-toggle', '=', true ),
+                        'required' => array( 'page-3-5-btn1-toggle', '=', true ),
                     ),
 
                     array(
@@ -2869,6 +2875,709 @@
         )
     ) );
 
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Team', 'integral' ),
+        'id'               => 'team-main',
+        'desc'             => __( 'Team', 'integral' ),
+        'icon'             => 'el',
+    ) );
+
+    // -> START Team (Hero)
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Hero', 'integral' ),
+        'id'     => 'team-hero',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'team-hero-bg',
+                'type'     => 'background',
+                'title'    => __( 'Background', 'integral' ),
+                'subtitle' => __( 'Change the background image or select a color. This will fill up the background of the welcome section.', 'integral' ),
+                'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                'output'   => array('.sm_hero_layout_team-hero'),
+                'compiler'    => 'true',
+                'default'  => array(
+                            'background-image' => get_template_directory_uri().'/images/bg-welcome.jpg',
+                            'background-size' => 'cover',
+                        )
+            ),
+            
+            array(
+                'id'       => 'team-hero-padding',
+                'type'     => 'spacing',
+                'title'    => __( 'Section Padding', 'integral' ),
+                'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of the welcome section.', 'integral' ),
+                'output'   => array('.sm_hero_layout_team-hero'),
+                'compiler'    => 'true',
+                'mode'    => 'padding',
+                'units'     => array('%', 'px'),
+                'units_extended'   => 'true',
+                'display_units'   => 'true',
+                'left'   => 'false',
+                'right'   => 'false',
+                'default'            => array(
+                        'padding-top'     => '190', 
+                        'padding-bottom'  => '150', 
+                        'units'          => 'px', 
+                    )
+            ),
+            
+            array(
+                'id'       => 'team-hero-overlay-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Background Overlay', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
+            ),
+            
+            array(
+                'id'    => 'team-hero-overlay-info',
+                'type'  => 'info',
+                'style' => 'info',
+                'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+              
+            ),
+            
+            array(
+                'id'       => 'team-hero-parallax-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Parallax Effect', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'team-hero-title',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 1', 'integral' ),
+                'subtitle' => __( '1st line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'Integral',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-team-hero-title',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 1 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_team-hero h1'),
+                'default'      => array(
+                    'font-size'   => '120px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+            array(
+                'id'       => 'team-hero-subtitle',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 2', 'integral' ),
+                'subtitle' => __( '2nd line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'One Page Theme',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-team-hero-subtitle',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 2 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_team-hero h2'),
+                'default'      => array(
+                    'font-size'   => '90px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'line-height' => '',
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+             array(
+                'id'       => 'team-hero-tagline',
+                'type'     => 'editor',
+                'title'    => __( 'Tagline', 'integral' ),
+                'subtitle' => __( 'Tagline for the hero section', 'integral' ),
+                'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                'default'  => 'A simple & elegant theme for freelancers, agencies and businesses. Perfect to promote your work or business.',
+            ),
+
+             array(
+                'id'       => 'team-hero-btn1-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 1', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'team-hero-btn1-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => 'View Features',
+                'required' => array( 'team-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'team-hero-btn1-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '#features',
+                'required' => array( 'team-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'team-hero-btn2-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 2', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+             array(
+                'id'       => 'team-hero-btn2-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 Text', 'integral' ),
+                'default'  => 'Download Now',
+                'required' => array( 'team-hero-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'team-hero-btn2-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 URL', 'integral' ),
+                'default'  => '#pts',
+                'required' => array( 'team-hero-btn2-toggle', '=', true ),
+            )
+        )
+    ) );
+
+    // -> START Team
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Team', 'integral' ),
+        'id'     => 'team',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+
+                    array(
+                    'id'       => 'team-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title', 'integral' ),
+                    'default'  => 'Our Team',
+                    ),
+
+                    array(
+                    'id'       => 'team-create',
+                    'type'     => 'raw',
+                    'title'    => __( 'Add Team Members', 'integral' ),
+                    'content' => __( 'Team members are created using Widgets. Go to APPEARANCE > Widgets and locate [Homepage Team Section]. Add widgets entitled [Integral - Team Member Widget] to this area to add team members. Add as many as you like.', 'integral' ),
+
+                    ),
+            
+                    array(
+                    'id'          => 'team-layout',
+                    'type'        => 'select',
+                    'title' => __( 'Team Members Layout', 'integral' ),
+                    'subtitle' => __( 'Configure the number of team members to appear in a row. Additional team members will automatically default to the next row.', 'integral' ),
+                    'options'     => array(
+                        '2'             => __( '6 per row (6 columns)', 'integral' ),
+                        '3'             => __( '4 per row (4 columns)', 'integral' ),
+                        '4'             => __( '3 per row (3 columns)', 'integral' ),
+                        '6'             => __( '2 per row (2 columns)', 'integral' ),
+                        '12'             => __( '1 per row (1 column)', 'integral' ),
+                    ),
+                    'default' => '4'
+                    ),
+            
+                    array(
+                            'id'          => 'team-custom-class',
+                            'type'        => 'text',
+                            'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                            'title' => __( 'Custom Class', 'integral' ),
+                            'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                            'default' => 'no-padding-bottom',
+                    ),
+
+                    array(
+                            'id'       => 'team-section-toggle',
+                            'type'     => 'switch',
+                            'default'  => true,
+                            'title'    => __( 'Disable Section', 'integral' ),
+                            'subtitle' => __( 'Toggle off to disable the team members section.', 'integral' ),
+                    ),
+
+        )
+    ) );
+
+    // -> START Mission
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Mission', 'integral' ),
+        'id'     => 'mission',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+                    array(
+                        'id'       => 'mission-bg',
+                        'type'     => 'background',
+                        'title'    => __( 'Background', 'integral' ),
+                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Call-to-Action section.', 'integral' ),
+                        'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                        'output'   => array('.sm_simple_text_layout_mission'),
+                        'compiler'    => 'true',
+                        'default'  => array(
+                                            'background-image' => get_template_directory_uri().'/images/bg-cta.jpg',
+                                            'background-size' => 'cover',
+                                        )
+                    ),
+            
+                    array(
+                        'id'       => 'mission-padding',
+                        'type'     => 'spacing',
+                        'title'    => __( 'Section Padding', 'integral' ),
+                        'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of call-to-action section.', 'integral' ),
+                        'output'   => array('.sm_simple_text_layout_mission'),
+                        'compiler'    => 'true',
+                        'mode'    => 'padding',
+                        'units'     => array('%', 'px'),
+                        'units_extended'   => 'true',
+                        'display_units'   => 'true',
+                        'left'   => 'false',
+                        'right'   => 'false',
+                        'default'            => array(
+                                'padding-top'     => '100px', 
+                                'padding-bottom'  => '110px', 
+                                'units'          => 'px', 
+                            )
+                    ),
+            
+                    array(
+                        'id'       => 'mission-overlay-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Background Overlay', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the dark color and pattern overlay which appears over the background image.', 'integral' ),
+                    ),
+            
+                    array(
+                        'id'    => 'mission-overlay-info',
+                        'type'  => 'info',
+                        'style' => 'info',
+                        'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+
+                    ),
+
+                    array(
+                        'id'       => 'mission-parallax-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Parallax Effect', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+                    ),
+
+                    array(
+                    'id'       => 'mission-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title', 'integral' ),
+                    'default'  => 'Choose Integral',
+                    ),
+
+                    array(
+                    'id'       => 'mission-text',
+                    'type'     => 'editor',
+                    'title'    => __( 'Content', 'integral' ),
+                    'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                    'default'   => 'Don’t settle for any theme for your Website, Integral is the best choice & you can buy it today at an affordable price!',
+                    ),
+
+                    array(
+                        'id'       => 'mission-btn1-toggle',
+                        'type'     => 'switch',
+                        'default'  => false,
+                        'title'    => __( 'Toggle Button 1', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                    ),
+
+                    array(
+                        'id'       => 'mission-btn1-text',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 1 Text', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => 'Download',
+                        'required' => array( 'mission-btn1-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'mission-btn1-url',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 1 URL', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => '#',
+                        'required' => array( 'mission-btn1-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'mission-btn2-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Toggle Button 2', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                    ),
+
+                     array(
+                        'id'       => 'mission-btn2-text',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 2 Text', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => 'Download',
+                        'required' => array( 'mission-btn2-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'mission-btn2-url',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 2 URL', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => '#',
+                        'required' => array( 'mission-btn2-toggle', '=', true ),
+                    ),
+            
+                    array(
+                    'id'          => 'mission-custom-class',
+                    'type'        => 'text',
+                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                    'title' => __( 'Custom Class', 'integral' ),
+                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    ),
+            
+                    array(
+                    'id'       => 'mission-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the call-to-action section.', 'integral' ),
+                    ),
+
+        )
+    ) );
+
+    // -> START Values
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Values', 'integral' ),
+        'id'     => 'values',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+             array(
+                'id'       => 'values-title',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Title',
+            ),
+            
+            array(
+                'id'       => 'values-title-icon',
+                'type'     => 'text',
+                'title'    => __( 'Title Icon', 'integral' ),
+                'desc'       => __( 'Copy and paste the required icon class from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank">Fontawesome Icons List</a> and choose from 600+ icons.', 'integral' ),
+                'default'  => 'fa-space-shuttle',
+            ),
+            
+            array(
+                'id'       => 'values-subtitle',
+                'type'     => 'editor',
+                'title'    => __( 'Subtitle', 'integral' ),
+                'default'  => 'Bla bla bla',
+            ),
+
+            array(
+                    'id'       => 'values-create',
+                    'type'     => 'raw',
+                    'title'    => __( 'Add values entry', 'integral' ),
+                    'content' => __( 'Columns are created using Widgets. Go to APPEARANCE > Widgets and locate [2.1 Columns Section]. Add widgets entitled [Solarmove - Column Widget] to this area to add columns. Add as many as you like.', 'integral' ),
+
+            ),
+            
+            array(
+                'id'          => 'values-layout',
+                'type'        => 'select',
+                'title' => __( 'Values Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of services to appear in a row. Additional services will automatically default to the next row.', 'integral' ),
+                'options'     => array(
+                    '2'             => __( '6 per row (6 columns)', 'integral' ),
+                    '3'             => __( '4 per row (4 columns)', 'integral' ),
+                    '4'             => __( '3 per row (3 columns)', 'integral' ),
+                    '6'             => __( '2 per row (2 columns)', 'integral' ),
+                    '12'             => __( '1 per row (1 column)', 'integral' ),
+                ),
+                'default' => '4'
+            ),
+            
+            
+            array(
+                'id'       => 'sfeature_icon_properties',
+                'type'     => 'typography',
+                'title'    => __( 'Values Icon Styles', 'integral' ),
+                'subtitle' => __( 'Specify the height and color of the icons. You can override styling for specific icons in the <a href="admin.php?page=Integral&tab=24">Custom Code</a> section. For color ideas visit <a target="_blank" href="http://www.colourlovers.com/colors/">ColourLovers</a>.', 'integral' ),
+                'output'    => array('.services .feature span'),
+                'preview' => false,
+                'subsets'       => false,
+                'font-weight'    => false,
+                'font-style'    => false,
+                'font-family' => false,
+                'text-align'=> false,
+                'line-height' => false,
+                 'default'  => array(
+                    'color'       => '#fff',
+                    'font-size'   => '80px',
+                  )
+
+                ),
+            array(
+                    'id'          => 'values-custom-class',
+                    'type'        => 'text',
+                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                    'title' => __( 'Custom Class', 'integral' ),
+                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    'default' => 'no-padding-bottom',
+            ),
+            
+            array(
+                    'id'       => 'values-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the services section.', 'integral' ),
+            )
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Stakeholders', 'integral' ),
+        'id'               => 'sh',
+        'desc'             => __( 'Stakeholders', 'integral' ),
+        'icon'             => 'el',
+    ) );
+
+    // -> START Stakeholders (Hero)
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Hero', 'integral' ),
+        'id'     => 'sh-hero',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'sh-hero-bg',
+                'type'     => 'background',
+                'title'    => __( 'Background', 'integral' ),
+                'subtitle' => __( 'Change the background image or select a color. This will fill up the background of the welcome section.', 'integral' ),
+                'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                'output'   => array('.sm_hero_layout_sh-hero'),
+                'compiler'    => 'true',
+                'default'  => array(
+                            'background-image' => get_template_directory_uri().'/images/bg-welcome.jpg',
+                            'background-size' => 'cover',
+                        )
+            ),
+            
+            array(
+                'id'       => 'sh-hero-padding',
+                'type'     => 'spacing',
+                'title'    => __( 'Section Padding', 'integral' ),
+                'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of the welcome section.', 'integral' ),
+                'output'   => array('.sm_hero_layout_sh-hero'),
+                'compiler'    => 'true',
+                'mode'    => 'padding',
+                'units'     => array('%', 'px'),
+                'units_extended'   => 'true',
+                'display_units'   => 'true',
+                'left'   => 'false',
+                'right'   => 'false',
+                'default'            => array(
+                        'padding-top'     => '190', 
+                        'padding-bottom'  => '150', 
+                        'units'          => 'px', 
+                    )
+            ),
+            
+            array(
+                'id'       => 'sh-hero-overlay-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Background Overlay', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
+            ),
+            
+            array(
+                'id'    => 'sh-hero-overlay-info',
+                'type'  => 'info',
+                'style' => 'info',
+                'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+              
+            ),
+            
+            array(
+                'id'       => 'sh-hero-parallax-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Parallax Effect', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-title',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 1', 'integral' ),
+                'subtitle' => __( '1st line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'Integral',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-sh-hero-title',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 1 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_sh-hero h1'),
+                'default'      => array(
+                    'font-size'   => '120px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-subtitle',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 2', 'integral' ),
+                'subtitle' => __( '2nd line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'One Page Theme',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-sh-hero-subtitle',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 2 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_sh-hero h2'),
+                'default'      => array(
+                    'font-size'   => '90px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'line-height' => '',
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+             array(
+                'id'       => 'sh-hero-tagline',
+                'type'     => 'editor',
+                'title'    => __( 'Tagline', 'integral' ),
+                'subtitle' => __( 'Tagline for the hero section', 'integral' ),
+                'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                'default'  => 'A simple & elegant theme for freelancers, agencies and businesses. Perfect to promote your work or business.',
+            ),
+
+             array(
+                'id'       => 'sh-hero-btn1-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 1', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-btn1-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => 'View Features',
+                'required' => array( 'sh-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-btn1-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '#features',
+                'required' => array( 'sh-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-btn2-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 2', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+             array(
+                'id'       => 'sh-hero-btn2-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 Text', 'integral' ),
+                'default'  => 'Download Now',
+                'required' => array( 'sh-hero-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'sh-hero-btn2-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 URL', 'integral' ),
+                'default'  => '#pts',
+                'required' => array( 'sh-hero-btn2-toggle', '=', true ),
+            )
+        )
+    ) );
 
     // -> START Links
     Redux::setSection( $opt_name, array(
@@ -2896,6 +3605,28 @@
                 ),
                 'default' => '2'
             )
+        )
+    ) );
+
+    // -> START Legal mentions
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Legal mentions', 'integral' ),
+        'id'     => 'legal-mentions',
+        'icon'   => 'el',
+        'fields' => array(
+             array(
+                'id'       => 'legal-mentions-title',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Legal mentions',
+            ),
+            
+            array(
+                'id'       => 'legal-mentions-text',
+                'type'     => 'editor',
+                'title'    => __( 'Text', 'integral' ),
+                'default'  => 'Bla bla bla',
+            ),
         )
     ) );
 

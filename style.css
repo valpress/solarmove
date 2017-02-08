@@ -164,7 +164,8 @@ Text Domain: solarmove
 .sm_simple_text_layout_page-3-1,
 .sm_simple_text_layout_page-3-1,
 .sm_simple_text_layout_page-3-4,
-.sm_simple_text_layout_page-3-5 {
+.sm_simple_text_layout_page-3-5,
+.sm_simple_text_layout_mission {
     background-size: cover;
     padding: 80px 0 90px 0;
     position: relative;
@@ -178,7 +179,8 @@ Text Domain: solarmove
 .sm_simple_text_layout_page-3-1,
 .sm_simple_text_layout_page-3-1,
 .sm_simple_text_layout_page-3-4,
-.sm_simple_text_layout_page-3-5 {
+.sm_simple_text_layout_page-3-5,
+.sm_simple_text_layout_mission {
     background-attachment: scroll !important;
     background-size: cover !important;
     background-position: center top !important;
@@ -190,7 +192,8 @@ Text Domain: solarmove
     .sm_simple_text_layout_page-3-1,
     .sm_simple_text_layout_page-3-1,
     .sm_simple_text_layout_page-3-4,
-    .sm_simple_text_layout_page-3-5 {
+    .sm_simple_text_layout_page-3-5,
+    .sm_simple_text_layout_mission {
         background-attachment: scroll !important;
     }
 }
@@ -200,7 +203,8 @@ Text Domain: solarmove
     .sm_simple_text_layout_page-3-1,
     .sm_simple_text_layout_page-3-1,
     .sm_simple_text_layout_page-3-4,
-    .sm_simple_text_layout_page-3-5 {
+    .sm_simple_text_layout_page-3-5,
+    .sm_simple_text_layout_mission {
         background-attachment: scroll !important;
     }
 }
@@ -487,6 +491,12 @@ table.battery-table th.active, table.battery-table td.active {
 .links a:hover {
   color: #888 !important;
   text-decoration: underline;
+}
+
+.legal_mentions {
+  text-align: left;
+  font-size: 8pt;
+  color:#555;
 }
 
 /* Triangle overlays */
