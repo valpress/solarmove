@@ -8,6 +8,12 @@ function solarmove_widgets_init() {
     
     global $integral;
 
+	register_sidebar( array(
+		'name' => __( 'Right Sidebar', 'integral' ),
+		'id' => 'rightbar',
+		'description' => __( 'Widgets in this area will be shown in the right sidebar.', 'integral' )
+    ) );
+
     $layout = $integral['page-2-1-layout'];
     register_sidebar( array(
 		'name' =>__( 'Page 2.1 Columns Section', 'integral'),
