@@ -557,6 +557,8 @@
                         'mission'        => 'Mission',
                         'values'         => 'Values',
                         'sh-hero'        => 'Stakeholders (hero)',
+                        'sh-grid'        => 'Stakeholders',
+                        'part-grid'      => 'Partners',
                         'links'          => 'Links',
                         'legal-mentions' => 'Legal mentions'
                     ),
@@ -3576,6 +3578,122 @@
                 'default'  => '#pts',
                 'required' => array( 'sh-hero-btn2-toggle', '=', true ),
             )
+        )
+    ) );
+
+    // -> START Stakeholders
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Stakeholders', 'integral' ),
+        'id'     => 'sh-grid',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'sh-grid-maintitle',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Stakeholders',
+            ),
+
+
+            array(
+                'id'       => 'sh-grid-create',
+                'type'     => 'raw',
+                'title'    => __( 'Add Stakeholders', 'integral' ),
+                'content' => __( 'Stakeholders are created using Widgets. Go to APPEARANCE > Widgets and locate [Solarmove Stakeholder Section]. Add widgets entitled [Solarmove - Stakeholder Widget] to this area to add stakeholders. Add as many as you like.', 'integral' ),
+
+                ),
+            
+            array(
+                'id'          => 'sh-grid-layout',
+                'type'        => 'select',
+                'title' => __( 'Stakeholders Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of stakeholders to appear in a row. Additional stakeholders will automatically default to the next row.', 'integral' ),
+                'options'     => array(
+                    '2'             => __( '6 per row (6 columns)', 'integral' ),
+                    '3'             => __( '4 per row (4 columns)', 'integral' ),
+                    '4'             => __( '3 per row (3 columns)', 'integral' ),
+                    '6'             => __( '2 per row (2 columns)', 'integral' ),
+                    '12'             => __( '1 per row (1 column)', 'integral' ),
+                ),
+                'default' => '4'
+            ),
+            array(
+                    'id'          => 'sh-grid-custom-class',
+                    'type'        => 'text',
+                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                    'title' => __( 'Custom Class', 'integral' ),
+                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    'default' => 'no-padding-bottom',
+            ),
+            
+            array(
+                    'id'       => 'sh-grid-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the stakeholders grid section.', 'integral' ),
+            ),
+
+        )
+    ) );
+
+    // -> START Partners
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Partners', 'integral' ),
+        'id'     => 'part-grid',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'part-grid-maintitle',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Partners',
+            ),
+
+
+            array(
+                'id'       => 'part-grid-create',
+                'type'     => 'raw',
+                'title'    => __( 'Add Partners', 'integral' ),
+                'content' => __( 'Partners are created using Widgets. Go to APPEARANCE > Widgets and locate [Solarmove Partner Section]. Add widgets entitled [Solarmove - Stakeholder Widget] to this area to add partners. Add as many as you like.', 'integral' ),
+
+                ),
+            
+            array(
+                'id'          => 'part-grid-layout',
+                'type'        => 'select',
+                'title' => __( 'Partners Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of partners to appear in a row. Additional partners will automatically default to the next row.', 'integral' ),
+                'options'     => array(
+                    '2'             => __( '6 per row (6 columns)', 'integral' ),
+                    '3'             => __( '4 per row (4 columns)', 'integral' ),
+                    '4'             => __( '3 per row (3 columns)', 'integral' ),
+                    '6'             => __( '2 per row (2 columns)', 'integral' ),
+                    '12'             => __( '1 per row (1 column)', 'integral' ),
+                ),
+                'default' => '4'
+            ),
+            array(
+                    'id'          => 'part-grid-custom-class',
+                    'type'        => 'text',
+                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                    'title' => __( 'Custom Class', 'integral' ),
+                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    'default' => 'no-padding-bottom',
+            ),
+            
+            array(
+                    'id'       => 'part-grid-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the partners grid section.', 'integral' ),
+            ),
+
         )
     ) );
 

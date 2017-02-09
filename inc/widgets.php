@@ -60,12 +60,12 @@ function solarmove_widgets_init() {
 		'after_widget' => '</tr>',
 	) ); 
     
-    $team_layout = $integral['team-layout'];
+    $layout = $integral['team-layout'];
     register_sidebar( array(
 		'name' =>__( 'Team Section', 'integral'),
 		'id' => 'team-widgets',
 		'description' => __( 'The team section which appears on the homepage. Drag and drop widgets titled [Solarmove - Team Member Widget] here to add team members.', 'integral' ),
-		'before_widget' => '<div class="col-sm-'.$team_layout.' col-md-'.$team_layout.' col-lg-'.$team_layout.' member">',
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' member">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="t-name">',
 		'after_title' => '</h3>',
@@ -79,6 +79,28 @@ function solarmove_widgets_init() {
 		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' feature">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+    
+    $layout = $integral['sh-grid-layout'];
+    register_sidebar( array(
+		'name' =>__( 'Stakeholder Section', 'integral'),
+		'id' => 'sh-grid-widget',
+		'description' => __( 'The stakeholder section which appears on the homepage. Drag and drop widgets titled [Solarmove - Stakeholder Widget] here to add stakeholders.', 'integral' ),
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' grid">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+    
+    $layout = $integral['part-grid-layout'];
+    register_sidebar( array(
+		'name' =>__( 'Partner Section', 'integral'),
+		'id' => 'part-grid-widget',
+		'description' => __( 'The partner section which appears on the homepage. Drag and drop widgets titled [Solarmove - Stakeholder Widget] here to add partners.', 'integral' ),
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' grid">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 
@@ -98,4 +120,5 @@ add_action( 'widgets_init', 'solarmove_widgets_init' );
 require_once get_template_directory() . '/../solarmove/inc/widgets/column_widget.php';
 require_once get_template_directory() . '/../solarmove/inc/widgets/link_widget.php';
 require_once get_template_directory() . '/../solarmove/inc/widgets/our_team_widget.php';
+require_once get_template_directory() . '/../solarmove/inc/widgets/stakeholder_widget.php';
 require_once get_template_directory() . '/../solarmove/inc/widgets/table_widget.php';
