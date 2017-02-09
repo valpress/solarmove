@@ -20,7 +20,7 @@
                 <span class="fa fa-envelope fa-md"></span><a href="mailto:<?php echo $integral['links-email'];  ?>"><?php echo $integral['links-email'];  ?></a>
                 </div><?php } ?>
                 <?php if ($integral['links-address']) { ?><div class="info">
-                <span class="fa fa-home fa-md"></span> <?php echo str_replace("\n", "<br>", $integral['links-address']); ?>
+                <span class="fa fa-home fa-md"></span><?php echo str_replace("\n", "<br>", $integral['links-address']); ?>
                 </div><?php } ?>
                 <ul class="socials">
                 <?php if ($integral['links-facebook']) { ?><li><a href="<?php echo $integral['links-facebook']; ?>"><i class="fa fa-facebook fa-lg"></i></a></li><?php } ?> 
