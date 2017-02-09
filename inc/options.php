@@ -3710,6 +3710,81 @@
                 'default'  => 'Title',
             ),
             array(
+                'id'       => 'links-phone',
+                'type'     => 'text',
+                'title'    => __( 'Phone Number', 'integral' ),
+                'default'  => '+1 323 456 7891',
+                ),
+            array(
+                'id'       => 'links-email',
+                'type'     => 'text',
+                'title'    => __( 'Email Address', 'integral' ),
+                'default'  => 'hello@yourwebsite.com',
+            ),
+            array(
+                'id'       => 'links-address',
+                'type'     => 'textarea',
+                'title'    => __( 'Location Address', 'integral' ),
+                'default'  => '1 Pacific Ave, Suite 100
+                Santa Monica, CA 90210
+                United States',
+            ),
+            array(
+                'id'          => 'links-facebook',
+                'type'        => 'text',
+                'title' => __( 'Facebook URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-twitter',
+                'type'        => 'text',
+                'title' => __( 'Twitter URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-googleplus',
+                'type'        => 'text',
+                'title' => __( 'Google+ URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-github',
+                'type'        => 'text',
+                'title' => __( 'Github URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-behance',
+                'type'        => 'text',
+                'title' => __( 'Behance URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-linkedin',
+                'type'        => 'text',
+                'title' => __( 'Linkedin URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-instagram',
+                'type'        => 'text',
+                'title' => __( 'Instagram URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-youtube',
+                'type'        => 'text',
+                'title' => __( 'Youtube URL', 'integral' ),
+                'default'  => '#',
+            ),
+            array(
+                'id'          => 'links-custom-class',
+                'type'        => 'text',
+                'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                'title' => __( 'Custom Class', 'integral' ),
+                'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+            ),
+            array(
                 'id'          => 'links-layout',
                 'type'        => 'select',
                 'title' => __( 'Link Layout', 'integral' ),
@@ -3722,6 +3797,13 @@
                     '12'             => __( '1 per row (1 column)', 'integral' ),
                 ),
                 'default' => '2'
+            ),
+            array(
+                'id'       => 'links-section-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Disable Section', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the contact section.', 'integral' ),
             )
         )
     ) );

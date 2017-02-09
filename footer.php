@@ -12,7 +12,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <?php if ($integral['links-title']) { ?><h1><?php echo __($integral['links-title'], 'solarmove'); ?></h1><?php } ?>
+                <?php if ($integral['links-title']) { ?><h3><?php echo $integral['links-title']; ?></h3><?php } ?>
+                <?php if ($integral['links-phone']) { ?><div class="info">
+                <span class="fa fa-phone fa-md"></span> <?php echo $integral['links-phone']; ?>
+                </div><?php } ?>
+                <?php if ($integral['links-email']) { ?><div class="info">
+                <span class="fa fa-envelope fa-md"></span><a href="mailto:<?php echo $integral['links-email'];  ?>"><?php echo $integral['links-email'];  ?></a>
+                </div><?php } ?>
+                <?php if ($integral['links-address']) { ?><div class="info">
+                <span class="fa fa-home fa-md"></span> <?php echo str_replace("\n", "<br>", $integral['links-address']); ?>
+                </div><?php } ?>
+                <ul class="socials">
+                <?php if ($integral['links-facebook']) { ?><li><a href="<?php echo $integral['links-facebook']; ?>"><i class="fa fa-facebook fa-lg"></i></a></li><?php } ?> 
+                <?php if ($integral['links-twitter']) { ?><li><a href="<?php echo $integral['links-twitter']; ?>"><i class="fa fa-twitter fa-lg"></i></a></li><?php } ?> 
+                <?php if ($integral['links-googleplus']) { ?><li><a href="<?php echo $integral['links-googleplus']; ?>"><i class="fa fa-google-plus fa-lg"></i></a></li><?php } ?> 
+                <?php if ($integral['links-github']) { ?><li><a href="<?php echo $integral['links-github']; ?>"><i class="fa fa-github fa-lg"></i></a></li><?php } ?> 
+                <?php if ($integral['links-behance']) { ?><li><a href="<?php echo $integral['links-behance']; ?>"><i class="fa fa-behance fa-lg"></i></a></li><?php } ?>
+                <?php if ($integral['links-linkedin']) { ?><li><a href="<?php echo $integral['links-linkedin']; ?>"><i class="fa fa-linkedin fa-lg"></i></a></li><?php } ?>
+                <?php if ($integral['links-instagram']) { ?><li><a href="<?php echo $integral['links-instagram']; ?>"><i class="fa fa-instagram fa-lg"></i></a></li><?php } ?>
+                <?php if ($integral['links-youtube']) { ?><li><a href="<?php echo $integral['links-youtube']; ?>"><i class="fa fa-youtube fa-lg"></i></a></li><?php } ?>
+                </ul>
             </div>
             <?php if ( is_active_sidebar( 'link-widget' ) ) : ?>
             <div class="col-md-6">
