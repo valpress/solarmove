@@ -65,6 +65,14 @@ function solarmove_widgets_init() {
 		'before_widget' => '<tr>',
 		'after_widget' => '</tr>',
 	) ); 
+
+	register_sidebar( array(
+		'name' =>__( 'Page 5.1 Table Section', 'integral'),
+		'id' => 'page-5-1-table-widget',
+		'description' => __( 'The table section which appears on page 5.1. Drag and drop widgets titled [Solarmove - Table Widget] here to add table rows.', 'integral' ),
+		'before_widget' => '<tr>',
+		'after_widget' => '</tr>',
+	) );
     
     $layout = $integral['team-layout'];
     register_sidebar( array(

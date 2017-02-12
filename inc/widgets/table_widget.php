@@ -44,23 +44,33 @@ class Solarmove_Table_Widget extends WP_Widget {
 
        echo $before_widget;
        echo '';
-       $this->format($column_1_text);
-       $this->format($column_2_text);
-       $this->format($column_3_text);
-       $this->format($column_4_text);
-       $this->format($column_5_text);
+       $this->format(-1, $column_1_text);
+       $this->format(0, $column_2_text);
+       $this->format(1, $column_3_text);
+       $this->format(2, $column_4_text);
+       $this->format(3, $column_5_text);
        echo '';
        echo $after_widget;
     }
 
-    function format($text) {
+    function format($index, $text) {
       if ($text) {
+
+        $class = '';
+
+        if ($index == -1)
+          $class = '';
+        elseif ($index == 0)
+          $class = 'class="col-' . $index . ' active"';
+        else
+          $class = 'class="col-' . $index . '"';
+
         if ($text == 'yes') {
-          echo '<td><i class="fa fa-green fa-check-circle" aria-hidden="true"></i></td>';
+          echo '<td ' . $class . '><i class="fa fa-green fa-check-circle" aria-hidden="true"></i></td>';
         } else if ($text == 'no') {
-          echo '<td><i class="fa fa-red fa-times-circle" aria-hidden="true"></i></td>';
+          echo '<td ' . $class . '><i class="fa fa-red fa-times-circle" aria-hidden="true"></i></td>';
         } else {
-          echo '<td>' . $text . '</td>';
+          echo '<td ' . $class . '>' . $text . '</td>';
         }
       }
     }

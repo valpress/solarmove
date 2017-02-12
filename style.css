@@ -295,6 +295,10 @@ Text Domain: solarmove
   height: 500px;
 }
 
+.carousel-small {
+  height: 300px;
+}
+
 .carousel-caption {
   z-index: 10;
 }
@@ -303,12 +307,27 @@ Text Domain: solarmove
   height: 500px;
 }
 
+.carousel-small .item {
+  height: 300px;
+}
+
 .carousel-control i {
   position: absolute;
   top: 50%;
   z-index: 5;
   display: inline-block;
   font-size: 20pt;
+}
+
+.carousel-control.left-black,
+.carousel-control.right-black {
+    background: transparent;
+    color: #1c1c1c;
+}
+
+.carousel-caption-black {
+    color: #1c1c1c;
+    text-shadow: none;
 }
 /* END COLUMN LAYOUT */
 
@@ -469,8 +488,17 @@ table.battery-table th {
   color: #343434;
 }
 
-table.battery-table th.active, table.battery-table td.active {
+table.battery-table th.active {
   background-color: #F0F0F0;
+  border-top: 1px solid #343434;
+  border-right: 1px solid #343434;
+  border-left: 1px solid #343434;
+}
+
+table.battery-table td.active {
+  background-color: #F0F0F0;
+  border-right: 1px solid #343434;
+  border-left: 1px solid #343434;
 }
 
 .links {

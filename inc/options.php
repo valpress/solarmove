@@ -552,6 +552,7 @@
                         'page-3-5'       => 'Page 3.5',
                         'page-4-0'       => 'Page 4.0',
                         'page-4-1'       => 'Page 4.1',
+                        'page-5-1'       => 'Page 5.1',
                         'team-hero'      => 'Team (hero)',
                         'team'           => 'Team',
                         'mission'        => 'Mission',
@@ -2874,6 +2875,103 @@
                     'title'    => __( 'Disable Section', 'integral' ),
                     'subtitle' => __( 'Toggle off to disable the services section.', 'integral' ),
             )
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Page Options de paiement', 'integral' ),
+        'id'               => 'page-5',
+        'desc'             => __( 'Page Options de paiement', 'integral' ),
+        'icon'             => 'el',
+    ) );
+
+    // -> START Page 5.1
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Page 5.1', 'integral' ),
+        'id'     => 'page-5-1',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+                    array(
+                        'id'       => 'page-5-1-slide-1-title',
+                        'type'     => 'text',
+                        'title'    => __( 'Title slide 1', 'integral' ),
+                        'default'  => 'Title slide 1',
+                    ), 
+                    array(
+                        'id'       => 'page-5-1-slide-1-subtitle',
+                        'type'     => 'text',
+                        'title'    => __( 'Subtitle slide 1', 'integral' ),
+                        'default'  => 'Subtitle slide 1.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-1-text',
+                        'type'     => 'editor',
+                        'title'    => __( 'Text slide 1', 'integral' ),
+                        'default'  => 'Text slide 1.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-2-title',
+                        'type'     => 'text',
+                        'title'    => __( 'Title slide 2', 'integral' ),
+                        'default'  => 'Title slide 2',
+                    ), 
+                    array(
+                        'id'       => 'page-5-1-slide-2-subtitle',
+                        'type'     => 'text',
+                        'title'    => __( 'Subtitle slide 2', 'integral' ),
+                        'default'  => 'Subtitle slide 2.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-2-text',
+                        'type'     => 'editor',
+                        'title'    => __( 'Text slide 2', 'integral' ),
+                        'default'  => 'Text slide 2.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-3-title',
+                        'type'     => 'text',
+                        'title'    => __( 'Title slide 3', 'integral' ),
+                        'default'  => 'Title slide 3',
+                    ), 
+                    array(
+                        'id'       => 'page-5-1-slide-3-subtitle',
+                        'type'     => 'text',
+                        'title'    => __( 'Subtitle slide 3', 'integral' ),
+                        'default'  => 'Subtitle slide 3.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-3-text',
+                        'type'     => 'editor',
+                        'title'    => __( 'Text slide 3', 'integral' ),
+                        'default'  => 'Text slide 3.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-slide-4-title',
+                        'type'     => 'text',
+                        'title'    => __( 'Title slide 4', 'integral' ),
+                        'default'  => 'Title slide 4',
+                    ), 
+                    array(
+                        'id'       => 'page-5-1-slide-4-subtitle',
+                        'type'     => 'text',
+                        'title'    => __( 'Subtitle slide 4', 'integral' ),
+                        'default'  => 'Subtitle slide 4.',
+                    ), 
+                    array(
+                        'id'       => 'page-5-1-slide-4-text',
+                        'type'     => 'editor',
+                        'title'    => __( 'Text slide 4', 'integral' ),
+                        'default'  => 'Text slide 4.',
+                    ),
+                    array(
+                        'id'       => 'page-5-1-section-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Disable Section', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the page-5-1 section.', 'integral' ),
+                    )
         )
     ) );
 
