@@ -402,104 +402,80 @@ select[aria-invalid="true"] {
 }
 
 /* Tables */
-table {
+table.solarmove-table {
   table-layout: fixed;
   width: 100%;
+  margin: 30px 0;
+  font-weight: 200;
 }
 
-table tbody {
+table.solarmove-table tbody {
   border-top: none;
 }
 
-table td {
-  text-align: center;
-  font-size: 15px;
-  padding: 20px;
-}
-
-table tr {
+table.solarmove-table tr {
   border-bottom: 1px solid #343434;
 }
 
-table th {
-  border-bottom: none;
-  color: #0B8340;
-  font-size: 24px;
-  font-weight: 200;
-  padding: 10px 20px;
-  transition: all .5s ease-in-out;
-  text-align: center;
-}
-
-table th.active {
-  color: #ffffff;
-  background-color: #0B8340;
-}
-
-table td.shadow {
-  position: relative;
-  transition: all .5s ease-in-out;
-  border-right: 1px solid #343434;
-  border-left: 1px solid #343434;
-}
-
-table .row-header {
-  text-align: left;
-  font-weight: 400;
-  padding-left: 5px;
-  padding-right: 30px;
-}
-
-table .fa-green {
-  color: #0B8340;
-  font-size: 18px;
-}
-
-table .fa-red {
-  color: #FF0000;
-  font-size: 18px;
-}
-
-.battery-table {
-  margin: 30px 0;
-}
-
-.battery-table-wrap .module__horizontal-carousel--arrow {
-  display: none;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-table.battery-table .row-header {
-  font-weight: 200;
-}
-
-.battery-table-wrap {
-  position: relative;
-}
-
-table.battery-table th {
+table.solarmove-table th {
   background: transparent;
   padding: 10px 0;
   color: black;
   font-size: 14px;
+  text-align: center;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: bold;
   color: #343434;
+  border-bottom: none;
+  transition: all .5s ease-in-out;
 }
 
-table.battery-table th.active {
+table.solarmove-table th.active {
   background-color: #F0F0F0;
   border-top: 1px solid #343434;
   border-right: 1px solid #343434;
   border-left: 1px solid #343434;
 }
 
-table.battery-table td.active {
+table.solarmove-table td {
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  transition: all .5s ease-in-out;
+}
+
+table.solarmove-table td.active {
   background-color: #F0F0F0;
   border-right: 1px solid #343434;
   border-left: 1px solid #343434;
 }
+
+table.solarmove-table td.title-column {
+  font-weight: bold;
+}
+
+table.solarmove-table td.shadow {
+  position: relative;
+  transition: all .5s ease-in-out;
+  border-right: 1px solid #343434;
+  border-left: 1px solid #343434;
+}
+
+table.solarmove-table td i.fa-green {
+  color: #0B8340;
+  font-size: 18px;
+}
+
+table.solarmove-table td i.fa-red {
+  color: #FF0000;
+  font-size: 18px;
+}
+
+table.solarmove-table td i.fa-orange {
+  color: #FFA500;
+  font-size: 18px;
+}
+/* End Tables */
 
 .links {
   padding: 33px 0;

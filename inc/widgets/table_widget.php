@@ -59,7 +59,7 @@ class Solarmove_Table_Widget extends WP_Widget {
         $class = '';
 
         if ($index == -1)
-          $class = '';
+          $class = 'class="title-column"';
         elseif ($index == 0)
           $class = 'class="col-' . $index . ' active"';
         else
@@ -69,6 +69,8 @@ class Solarmove_Table_Widget extends WP_Widget {
           echo '<td ' . $class . '><i class="fa fa-green fa-check-circle" aria-hidden="true"></i></td>';
         } else if ($text == 'no') {
           echo '<td ' . $class . '><i class="fa fa-red fa-times-circle" aria-hidden="true"></i></td>';
+        } else if ($text == 'n/a') {
+          echo '<td ' . $class . '><i class="fa fa-orange fa-minus-circle" aria-hidden="true"></i></td>';
         } else {
           echo '<td ' . $class . '>' . $text . '</td>';
         }

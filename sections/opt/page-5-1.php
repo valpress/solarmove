@@ -63,7 +63,7 @@
         <div class="row">
             <?php if ( is_active_sidebar( 'page-5-1-table-widget' ) ) : ?>
             <div class="col-md-12">
-                <table class="battery-table">
+                <table class="solarmove-table">
                     <thead>
                         <tr>
                             <th></th>

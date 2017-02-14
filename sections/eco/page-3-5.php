@@ -18,14 +18,14 @@
             </div>
             <?php if ( is_active_sidebar( 'page-3-5-table-widget' ) ) : ?>
             <div class="col-md-12">
-                <table class="battery-table">
+                <table class="solarmove-table">
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                            <th>Column 3</th>
-                            <th>Column 4</th>
+                            <th><?php echo __($integral['page-3-5-col-1-title'], 'solarmove'); ?></th>
+                            <th><?php echo __($integral['page-3-5-col-2-title'], 'solarmove'); ?></th>
+                            <th><?php echo __($integral['page-3-5-col-3-title'], 'solarmove'); ?></th>
+                            <th><?php echo __($integral['page-3-5-col-4-title'], 'solarmove'); ?></th>
                         </tr>
                     </thead>
                     <tbody>

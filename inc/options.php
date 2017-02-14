@@ -2567,6 +2567,34 @@
                         'default'  => '#',
                         'required' => array( 'page-3-5-btn2-toggle', '=', true ),
                     ),
+
+                    array(
+                    'id'       => 'page-3-5-col-1-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title column 1', 'integral' ),
+                    'default'  => 'Column 1',
+                    ),
+
+                    array(
+                    'id'       => 'page-3-5-col-2-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title column 2', 'integral' ),
+                    'default'  => 'Column 2',
+                    ),
+
+                    array(
+                    'id'       => 'page-3-5-col-3-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title column 3', 'integral' ),
+                    'default'  => 'Column 3',
+                    ),
+
+                    array(
+                    'id'       => 'page-3-5-col-4-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title column 4', 'integral' ),
+                    'default'  => 'Column 4',
+                    ),
             
                     array(
                     'id'          => 'page-3-5-custom-class',
