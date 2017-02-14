@@ -52,12 +52,12 @@
 				</div>
 			</div>
 			<a class="left left-black carousel-control" href="#page-5-1-carousel" role="button" data-slide="prev">
-				<i class="fa fa-chevron-left"></i>
-				<span class="sr-only">Previous</span>
+				<i class="fa fa-chevron-left" data-slide="prev"></i>
+				<span class="sr-only" data-slide="prev">Previous</span>
 			</a>
 			<a class="right right-black carousel-control" href="#page-5-1-carousel" role="button" data-slide="next">
-				<i class="fa fa-chevron-right"></i>
-				<span class="sr-only">Next</span>
+				<i class="fa fa-chevron-right" data-slide="next"></i>
+				<span class="sr-only" data-slide="next">Next</span>
 			</a>
 	    </div>
         <div class="row">
@@ -84,21 +84,34 @@
     <script type="text/javascript">
 
     	var table_cols = 4;
+    	var table_col_active = 0;
 
-    	function update_table_style() {
+    	function update_table_style(e) {
 			for (var i = 0; i < table_cols; i++) {
 				jQuery(".col-" + i).removeClass("active");
 			};
 			jQuery(".carousel-indicators > li").each(function() {
 				if (jQuery(this).hasClass("active")) {
-					slideIndex = get_slide_index(jQuery(this));
-					jQuery(".col-" + slideIndex).addClass("active");
+					slideIndex = get_slide_index(jQuery(this), e);
+					table_col_active = slideIndex;
+					setTimeout(function() {
+						jQuery(".col-" + slideIndex).addClass("active");
+					}, 500);
 				}
 			});
     	}
 
-    	function get_slide_index(el) {
-			return (parseInt(el.attr('data-slide-to')) + 1) % table_cols;
+    	function get_slide_index(el, e) {
+    		dir = e.target.getAttribute('data-slide');
+    		ind = parseInt(el.attr('data-slide-to'));
+    		if (dir == 'next') {
+				return (ind+ 1) % table_cols;
+			} else {
+				if (ind == 0)
+					return table_cols - 1;
+				else
+					return (ind - 1) % table_cols;
+			}
     	}
 
 		jQuery(document)
