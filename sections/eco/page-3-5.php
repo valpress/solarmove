@@ -22,7 +22,7 @@
                     <thead>
                         <tr>
                             <th></th>
-                            <th><?php echo __($integral['page-3-5-col-1-title'], 'solarmove'); ?></th>
+                            <th class="active"><?php echo __($integral['page-3-5-col-1-title'], 'solarmove'); ?></th>
                             <th><?php echo __($integral['page-3-5-col-2-title'], 'solarmove'); ?></th>
                             <th><?php echo __($integral['page-3-5-col-3-title'], 'solarmove'); ?></th>
                             <th><?php echo __($integral['page-3-5-col-4-title'], 'solarmove'); ?></th>
