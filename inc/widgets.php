@@ -117,6 +117,17 @@ function solarmove_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+    
+    $layout = $integral['proj-grid-layout'];
+    register_sidebar( array(
+		'name' =>__( 'Projects Section', 'integral'),
+		'id' => 'proj-grid-widget',
+		'description' => __( 'The projects section which appears on the homepage. Drag and drop widgets titled [Solarmove - Stakeholder Widget] here to add projects.', 'integral' ),
+		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' grid">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 
     $layout = $integral['links-layout'];
 	register_sidebar( array(

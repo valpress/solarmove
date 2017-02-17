@@ -560,6 +560,8 @@
                         'sh-hero'        => 'Stakeholders (hero)',
                         'sh-grid'        => 'Stakeholders',
                         'part-grid'      => 'Partners',
+                        'proj-hero'      => 'Projects (hero)',
+                        'proj-grid'      => 'Projects',
                         'links'          => 'Links',
                         'legal-mentions' => 'Legal mentions'
                     ),
@@ -3818,6 +3820,265 @@
                     'default'  => true,
                     'title'    => __( 'Disable Section', 'integral' ),
                     'subtitle' => __( 'Toggle off to disable the partners grid section.', 'integral' ),
+            ),
+
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Projects', 'integral' ),
+        'id'               => 'proj',
+        'desc'             => __( 'Projects', 'integral' ),
+        'icon'             => 'el',
+    ) );
+
+    // -> START Projects (Hero)
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Hero', 'integral' ),
+        'id'     => 'proj-hero',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'proj-hero-bg',
+                'type'     => 'background',
+                'title'    => __( 'Background', 'integral' ),
+                'subtitle' => __( 'Change the background image or select a color. This will fill up the background of the welcome section.', 'integral' ),
+                'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                'output'   => array('.sm_hero_layout_proj-hero'),
+                'compiler'    => 'true',
+                'default'  => array(
+                            'background-image' => get_template_directory_uri().'/images/bg-welcome.jpg',
+                            'background-size' => 'cover',
+                        )
+            ),
+            
+            array(
+                'id'       => 'proj-hero-padding',
+                'type'     => 'spacing',
+                'title'    => __( 'Section Padding', 'integral' ),
+                'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of the welcome section.', 'integral' ),
+                'output'   => array('.sm_hero_layout_proj-hero'),
+                'compiler'    => 'true',
+                'mode'    => 'padding',
+                'units'     => array('%', 'px'),
+                'units_extended'   => 'true',
+                'display_units'   => 'true',
+                'left'   => 'false',
+                'right'   => 'false',
+                'default'            => array(
+                        'padding-top'     => '190', 
+                        'padding-bottom'  => '150', 
+                        'units'          => 'px', 
+                    )
+            ),
+            
+            array(
+                'id'       => 'proj-hero-overlay-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Background Overlay', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the dark overlay and pattern which appears over the background image.', 'integral' ),
+            ),
+            
+            array(
+                'id'    => 'proj-hero-overlay-info',
+                'type'  => 'info',
+                'style' => 'info',
+                'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+              
+            ),
+            
+            array(
+                'id'       => 'proj-hero-parallax-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Parallax Effect', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-title',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 1', 'integral' ),
+                'subtitle' => __( '1st line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'Integral',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-proj-hero-title',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 1 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_proj-hero h1'),
+                'default'      => array(
+                    'font-size'   => '120px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-subtitle',
+                'type'     => 'text',
+                'title'    => __( 'Title Line 2', 'integral' ),
+                'subtitle' => __( '2nd line of the title', 'integral' ),
+                'desc'      => __( '', 'integral' ),
+                'default'  => 'One Page Theme',
+            ),
+            
+            array(
+                'id'       => 'gen-typography-proj-hero-subtitle',
+                'type'     => 'typography',
+                'title'    => __( 'Title Line 2 Typography', 'integral' ),
+                'subsets'       => false,
+                'font-style'    => false,
+                'text-align'    => true,
+                'color'         => true,
+                'letter-spacing'=> true,
+                'line-height'   => true,
+                'text-transform'   => true,
+                'output'        => array('.sm_hero_layout_proj-hero h2'),
+                'default'      => array(
+                    'font-size'   => '90px',
+                    'font-family' => 'Cabin',
+                    'google'      => true,
+                    'line-height' => '',
+                    'font-weight' => '400',
+                    'color'         => '#fff',
+                    'letter-spacing' => '1.25px',
+                    'text-transform'   => 'none',
+                     
+                ),
+            ),
+
+             array(
+                'id'       => 'proj-hero-tagline',
+                'type'     => 'editor',
+                'title'    => __( 'Tagline', 'integral' ),
+                'subtitle' => __( 'Tagline for the hero section', 'integral' ),
+                'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                'default'  => 'A simple & elegant theme for freelancers, agencies and businesses. Perfect to promote your work or business.',
+            ),
+
+             array(
+                'id'       => 'proj-hero-btn1-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 1', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-btn1-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 Text', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => 'View Features',
+                'required' => array( 'proj-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-btn1-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 1 URL', 'integral' ),
+                'subtitle' => __( '', 'integral' ),
+                'default'  => '#features',
+                'required' => array( 'proj-hero-btn1-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-btn2-toggle',
+                'type'     => 'switch',
+                'default'  => true,
+                'title'    => __( 'Toggle Button 2', 'integral' ),
+                'subtitle' => __( 'Toggle off to disable the button', 'integral' ),
+            ),
+
+             array(
+                'id'       => 'proj-hero-btn2-text',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 Text', 'integral' ),
+                'default'  => 'Download Now',
+                'required' => array( 'proj-hero-btn2-toggle', '=', true ),
+            ),
+
+            array(
+                'id'       => 'proj-hero-btn2-url',
+                'type'     => 'text',
+                'title'    => __( 'Button 2 URL', 'integral' ),
+                'default'  => '#pts',
+                'required' => array( 'proj-hero-btn2-toggle', '=', true ),
+            )
+        )
+    ) );
+
+    // -> START Projects
+    Redux::setSection( $opt_name, array(
+        'title'  => __( 'Projects', 'integral' ),
+        'id'     => 'proj-grid',
+        'icon'   => 'el el-chevron-right',
+        'subsection' => true,
+        'fields' => array(
+
+            array(
+                'id'       => 'proj-grid-maintitle',
+                'type'     => 'text',
+                'title'    => __( 'Title', 'integral' ),
+                'default'  => 'Projects',
+            ),
+
+
+            array(
+                'id'       => 'proj-grid-create',
+                'type'     => 'raw',
+                'title'    => __( 'Add Projects', 'integral' ),
+                'content' => __( 'Projects are created using Widgets. Go to APPEARANCE > Widgets and locate [Solarmove Project Section]. Add widgets entitled [Solarmove - Stakeholder Widget] to this area to add projects. Add as many as you like.', 'integral' ),
+
+                ),
+            
+            array(
+                'id'          => 'proj-grid-layout',
+                'type'        => 'select',
+                'title' => __( 'Projects Layout', 'integral' ),
+                'subtitle' => __( 'Configure the number of projects to appear in a row. Additional projects will automatically default to the next row.', 'integral' ),
+                'options'     => array(
+                    '2'             => __( '6 per row (6 columns)', 'integral' ),
+                    '3'             => __( '4 per row (4 columns)', 'integral' ),
+                    '4'             => __( '3 per row (3 columns)', 'integral' ),
+                    '6'             => __( '2 per row (2 columns)', 'integral' ),
+                    '12'             => __( '1 per row (1 column)', 'integral' ),
+                ),
+                'default' => '4'
+            ),
+            array(
+                    'id'          => 'proj-grid-custom-class',
+                    'type'        => 'text',
+                    'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
+                    'title' => __( 'Custom Class', 'integral' ),
+                    'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
+                    'default' => 'no-padding-bottom',
+            ),
+            
+            array(
+                    'id'       => 'proj-grid-section-toggle',
+                    'type'     => 'switch',
+                    'default'  => true,
+                    'title'    => __( 'Disable Section', 'integral' ),
+                    'subtitle' => __( 'Toggle off to disable the projects grid section.', 'integral' ),
             ),
 
         )
