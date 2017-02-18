@@ -558,7 +558,7 @@
                         'mission'        => 'Mission',
                         'values'         => 'Values',
                         'sh-hero'        => 'Stakeholders (hero)',
-                        'sh-grid'        => 'Stakeholders',
+                        'sh'             => 'Stakeholders',
                         'part-grid'      => 'Partners',
                         'proj-hero'      => 'Projects (hero)',
                         'proj-grid'      => 'Projects',
@@ -3510,7 +3510,7 @@
 
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Stakeholders', 'integral' ),
-        'id'               => 'sh',
+        'id'               => 'sh-main',
         'desc'             => __( 'Stakeholders', 'integral' ),
         'icon'             => 'el',
     ) );
@@ -3712,57 +3712,151 @@
     // -> START Stakeholders
     Redux::setSection( $opt_name, array(
         'title'  => __( 'Stakeholders', 'integral' ),
-        'id'     => 'sh-grid',
+        'id'     => 'sh',
         'icon'   => 'el el-chevron-right',
         'subsection' => true,
         'fields' => array(
 
-            array(
-                'id'       => 'sh-grid-maintitle',
-                'type'     => 'text',
-                'title'    => __( 'Title', 'integral' ),
-                'default'  => 'Stakeholders',
-            ),
-
-
-            array(
-                'id'       => 'sh-grid-create',
-                'type'     => 'raw',
-                'title'    => __( 'Add Stakeholders', 'integral' ),
-                'content' => __( 'Stakeholders are created using Widgets. Go to APPEARANCE > Widgets and locate [Solarmove Stakeholder Section]. Add widgets entitled [Solarmove - Stakeholder Widget] to this area to add stakeholders. Add as many as you like.', 'integral' ),
-
-                ),
+                    array(
+                        'id'       => 'sh-bg',
+                        'type'     => 'background',
+                        'title'    => __( 'Background', 'integral' ),
+                        'subtitle' => __( 'Select a color or upload an image. This will fill up the background of the Call-to-Action section.', 'integral' ),
+                        'desc'  => __( 'Preferred image size of minimum 1600px wide', 'integral' ),
+                        'output'   => array('.sm_simple_text_layout_sh'),
+                        'compiler'    => 'true',
+                        'default'  => array(
+                                            'background-image' => get_template_directory_uri().'/images/bg-cta.jpg',
+                                            'background-size' => 'cover',
+                                        )
+                    ),
             
-            array(
-                'id'          => 'sh-grid-layout',
-                'type'        => 'select',
-                'title' => __( 'Stakeholders Layout', 'integral' ),
-                'subtitle' => __( 'Configure the number of stakeholders to appear in a row. Additional stakeholders will automatically default to the next row.', 'integral' ),
-                'options'     => array(
-                    '2'             => __( '6 per row (6 columns)', 'integral' ),
-                    '3'             => __( '4 per row (4 columns)', 'integral' ),
-                    '4'             => __( '3 per row (3 columns)', 'integral' ),
-                    '6'             => __( '2 per row (2 columns)', 'integral' ),
-                    '12'             => __( '1 per row (1 column)', 'integral' ),
-                ),
-                'default' => '4'
-            ),
-            array(
-                    'id'          => 'sh-grid-custom-class',
+                    array(
+                        'id'       => 'sh-padding',
+                        'type'     => 'spacing',
+                        'title'    => __( 'Section Padding', 'integral' ),
+                        'subtitle' => __( 'Set the padding of the top and bottom of this section. You can also use this to increase or decrease the height of call-to-action section.', 'integral' ),
+                        'output'   => array('.sm_simple_text_layout_sh'),
+                        'compiler'    => 'true',
+                        'mode'    => 'padding',
+                        'units'     => array('%', 'px'),
+                        'units_extended'   => 'true',
+                        'display_units'   => 'true',
+                        'left'   => 'false',
+                        'right'   => 'false',
+                        'default'            => array(
+                                'padding-top'     => '100px', 
+                                'padding-bottom'  => '110px', 
+                                'units'          => 'px', 
+                            )
+                    ),
+            
+                    array(
+                        'id'       => 'sh-overlay-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Background Overlay', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the dark color and pattern overlay which appears over the background image.', 'integral' ),
+                    ),
+            
+                    array(
+                        'id'    => 'sh-overlay-info',
+                        'type'  => 'info',
+                        'style' => 'info',
+                        'title' => __( 'To change the color and opacity of the dark overlay which covers the background image, edit class <code>.blacklayer</code> on line 329 of the style.css file.', 'integral' ),
+
+                    ),
+
+                    array(
+                        'id'       => 'sh-parallax-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Parallax Effect', 'integral' ),
+                        'subtitle' => __( 'Toggle off to disable the parallax effect', 'integral' ),
+                    ),
+
+                    array(
+                    'id'       => 'sh-title',
+                    'type'     => 'text',
+                    'title'    => __( 'Title', 'integral' ),
+                    'default'  => 'Choose Integral',
+                    ),
+
+                    array(
+                    'id'       => 'sh-text',
+                    'type'     => 'editor',
+                    'title'    => __( 'Content', 'integral' ),
+                    'desc'    => __( 'Custom HTML allowed', 'integral' ),
+                    'default'   => 'Don’t settle for any theme for your Website, Integral is the best choice & you can buy it today at an affordable price!',
+                    ),
+
+                    array(
+                        'id'       => 'sh-btn1-toggle',
+                        'type'     => 'switch',
+                        'default'  => false,
+                        'title'    => __( 'Toggle Button 1', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                    ),
+
+                    array(
+                        'id'       => 'sh-btn1-text',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 1 Text', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => 'Download',
+                        'required' => array( 'sh-btn1-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'sh-btn1-url',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 1 URL', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => '#',
+                        'required' => array( 'sh-btn1-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'sh-btn2-toggle',
+                        'type'     => 'switch',
+                        'default'  => true,
+                        'title'    => __( 'Toggle Button 2', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                    ),
+
+                     array(
+                        'id'       => 'sh-btn2-text',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 2 Text', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => 'Download',
+                        'required' => array( 'sh-btn2-toggle', '=', true ),
+                    ),
+
+                    array(
+                        'id'       => 'sh-btn2-url',
+                        'type'     => 'text',
+                        'title'    => __( 'Button 2 URL', 'integral' ),
+                        'subtitle' => __( '', 'integral' ),
+                        'default'  => '#',
+                        'required' => array( 'sh-btn2-toggle', '=', true ),
+                    ),
+            
+                    array(
+                    'id'          => 'sh-custom-class',
                     'type'        => 'text',
                     'placeholder' => __( 'Example: no-padding-bottom', 'integral' ),
                     'title' => __( 'Custom Class', 'integral' ),
                     'subtitle'       => __( 'Append a custom CSS class to this section.', 'integral' ),
-                    'default' => 'no-padding-bottom',
-            ),
+                    ),
             
-            array(
-                    'id'       => 'sh-grid-section-toggle',
+                    array(
+                    'id'       => 'sh-section-toggle',
                     'type'     => 'switch',
                     'default'  => true,
                     'title'    => __( 'Disable Section', 'integral' ),
-                    'subtitle' => __( 'Toggle off to disable the stakeholders grid section.', 'integral' ),
-            ),
+                    'subtitle' => __( 'Toggle off to disable the call-to-action section.', 'integral' ),
+                    ),
 
         )
     ) );

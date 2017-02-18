@@ -12,6 +12,7 @@
 jQuery(document).ready(function($){
 
 	<?php if($integral['sh-hero-parallax-toggle']==1) { ?> $('#sh-hero').parallax("50%", 0.3); <?php } ?>
+	<?php if($integral['sh-parallax-toggle']==1) { ?> $('#sh').parallax("50%", 0.3); <?php } ?>
 	
 })	
 </script>

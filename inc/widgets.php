@@ -96,17 +96,6 @@ function solarmove_widgets_init() {
 		'after_title' => '</h3>',
 	) );
     
-    $layout = $integral['sh-grid-layout'];
-    register_sidebar( array(
-		'name' =>__( 'Stakeholder Section', 'integral'),
-		'id' => 'sh-grid-widget',
-		'description' => __( 'The stakeholder section which appears on the homepage. Drag and drop widgets titled [Solarmove - Stakeholder Widget] here to add stakeholders.', 'integral' ),
-		'before_widget' => '<div class="col-sm-'.$layout.' col-md-'.$layout.' col-lg-'.$layout.' grid">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-    
     $layout = $integral['part-grid-layout'];
     register_sidebar( array(
 		'name' =>__( 'Partner Section', 'integral'),
