@@ -9,8 +9,6 @@
 <?php global $integral; ?>
 <?php if($integral['page-2-2-section-toggle']==1) { ?>
 <section id="page-2-2" class="sm_carousel_layout">
-    <div class="triangle--left-top"></div>
-    <div class="triangle--right-top"></div>
     <div id="page-2-2-carousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#page-2-2-carousel" data-slide-to="0" class="active"></li>

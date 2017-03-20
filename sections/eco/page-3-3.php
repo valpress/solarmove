@@ -9,8 +9,6 @@
 <?php global $integral; ?>
 <?php if($integral['page-3-3-section-toggle']==1) { ?>
 <section id="page-3-3" class="sm_column_layout <?php echo $integral['page-3-3-custom-class']; ?>">
-    <div class="triangle--left-top"></div>
-    <div class="triangle--right-top"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12 heading">

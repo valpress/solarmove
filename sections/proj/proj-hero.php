@@ -21,20 +21,20 @@
             <?php } ?>
 			<?php if($integral['proj-hero-btn1-toggle']==true && $integral['proj-hero-btn2-toggle']==false) { ?>
             <div class="col-md-12 text-center">
-                <a href="<?php echo $integral['proj-hero-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['proj-hero-btn1-text'], 'solarmove'); ?></a>
+                <a href="<?php echo $integral['proj-hero-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['proj-hero-btn1-text'], 'solarmove'); ?></a>
 			</div>
 			<?php } else if($integral['proj-hero-btn1-toggle']==true){ ?>
 			<div class="col-md-6 text-right">
-                <a href="<?php echo $integral['proj-hero-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['proj-hero-btn1-text'], 'solarmove'); ?></a>
+                <a href="<?php echo $integral['proj-hero-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['proj-hero-btn1-text'], 'solarmove'); ?></a>
 			</div>
 			<?php } ?>
 			<?php if($integral['proj-hero-btn2-toggle']==true && $integral['proj-hero-btn1-toggle']==false) { ?>
 			<div class="col-md-12 text-center">
-                <a href="<?php echo $integral['proj-hero-btn2-url']; ?>" class="btn btn-lg btn-primary"><?php echo __($integral['proj-hero-btn2-text'], 'solarmove'); ?></a>
+                <a href="<?php echo $integral['proj-hero-btn2-url']; ?>" class="btn btn-lg btn-primary btn-solarmove"><?php echo __($integral['proj-hero-btn2-text'], 'solarmove'); ?></a>
 			</div>
 			<?php } else if($integral['proj-hero-btn2-toggle']==true) { ?>
 			<div class="col-md-6 text-left">
-                <a href="<?php echo $integral['proj-hero-btn2-url']; ?>" class="btn btn-lg btn-primary"><?php echo __($integral['proj-hero-btn2-text'], 'solarmove'); ?></a>
+                <a href="<?php echo $integral['proj-hero-btn2-url']; ?>" class="btn btn-lg btn-primary btn-solarmove"><?php echo __($integral['proj-hero-btn2-text'], 'solarmove'); ?></a>
 			</div>
 			<?php } ?>
 		</div>

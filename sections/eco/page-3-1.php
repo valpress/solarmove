@@ -18,21 +18,21 @@
             </div>
             <?php if($integral['page-3-1-btn1-toggle']==true && $integral['page-3-1-btn2-toggle']==false) { ?>
                 <div class="col-md-12 text-center">
-                <?php if ($integral['page-3-1-btn1-text']) { ?><a href="<?php echo $integral['page-3-1-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['page-3-1-btn1-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['page-3-1-btn1-text']) { ?><a href="<?php echo $integral['page-3-1-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['page-3-1-btn1-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } else if($integral['page-3-1-btn1-toggle']==true){ ?>
                 <div class="col-md-6 text-right">
-                <?php if ($integral['page-3-1-btn1-text']) { ?><a href="<?php echo $integral['page-3-1-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['page-3-1-btn1-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['page-3-1-btn1-text']) { ?><a href="<?php echo $integral['page-3-1-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['page-3-1-btn1-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } ?>
 
                 <?php if($integral['page-3-1-btn2-toggle']==true && $integral['page-3-1-btn1-toggle']==false) { ?>
                 <div class="col-md-12 text-center">
-                <?php if ($integral['page-3-1-btn2-text']) { ?><a href="<?php echo $integral['page-3-1-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary"><?php echo __($integral['page-3-1-btn2-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['page-3-1-btn2-text']) { ?><a href="<?php echo $integral['page-3-1-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary btn-solarmove"><?php echo __($integral['page-3-1-btn2-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } else if($integral['page-3-1-btn2-toggle']==true) { ?>
                 <div class="col-md-6 text-left">
-                <?php if ($integral['page-3-1-btn2-text']) { ?><a href="<?php echo $integral['page-3-1-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary"><?php echo __($integral['page-3-1-btn2-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['page-3-1-btn2-text']) { ?><a href="<?php echo $integral['page-3-1-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary btn-solarmove"><?php echo __($integral['page-3-1-btn2-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
             <?php } ?>
         </div>

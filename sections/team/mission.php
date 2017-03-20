@@ -18,21 +18,21 @@
             </div>
             <?php if($integral['mission-btn1-toggle']==true && $integral['mission-btn2-toggle']==false) { ?>
                 <div class="col-md-12 text-center">
-                <?php if ($integral['mission-btn1-text']) { ?><a href="<?php echo $integral['mission-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['mission-btn1-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['mission-btn1-text']) { ?><a href="<?php echo $integral['mission-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['mission-btn1-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } else if($integral['mission-btn1-toggle']==true){ ?>
                 <div class="col-md-6 text-right">
-                <?php if ($integral['mission-btn1-text']) { ?><a href="<?php echo $integral['mission-btn1-url']; ?>" class="btn btn-lg btn-secondary"><?php echo __($integral['mission-btn1-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['mission-btn1-text']) { ?><a href="<?php echo $integral['mission-btn1-url']; ?>" class="btn btn-lg btn-secondary btn-solarmove"><?php echo __($integral['mission-btn1-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } ?>
 
                 <?php if($integral['mission-btn2-toggle']==true && $integral['mission-btn1-toggle']==false) { ?>
                 <div class="col-md-12 text-center">
-                <?php if ($integral['mission-btn2-text']) { ?><a href="<?php echo $integral['mission-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary"><?php echo __($integral['mission-btn2-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['mission-btn2-text']) { ?><a href="<?php echo $integral['mission-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary btn-solarmove"><?php echo __($integral['mission-btn2-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
                 <?php } else if($integral['mission-btn2-toggle']==true) { ?>
                 <div class="col-md-6 text-left">
-                <?php if ($integral['mission-btn2-text']) { ?><a href="<?php echo $integral['mission-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary"><?php echo __($integral['mission-btn2-text'], 'solarmove'); ?></a><?php } ?>
+                <?php if ($integral['mission-btn2-text']) { ?><a href="<?php echo $integral['mission-btn2-url']; ?>" class="btn btn-danger btn-lg btn-primary btn-solarmove"><?php echo __($integral['mission-btn2-text'], 'solarmove'); ?></a><?php } ?>
                 </div>
             <?php } ?>
         </div>

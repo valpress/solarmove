@@ -14,6 +14,65 @@ Text Domain: solarmove
 
 @import url("../integral-pro/style.css");
 
+/* START FONTS */
+/* =================== */
+@font-face {
+  font-family: 'NuckleBold';
+  src: url('fonts/nuckle_bold_web.eot');
+  src: url('fonts/nuckle_bold_web.eot?#iefix') format('embedded-opentype'),
+       url('fonts/nuckle_bold_web.woff2') format('woff2'),
+       url('fonts/nuckle_bold_web.woff') format('woff'),
+       url('fonts/nuckle_bold_web.ttf')  format('truetype'),
+       url('fonts/nuckle_bold_web.svg#nucklebold') format('svg');
+}
+
+@font-face {
+  font-family: 'NuckleSemibold';
+  src: url('fonts/nuckle_semibold_web.eot');
+  src: url('fonts/nuckle_semibold_web.eot?#iefix') format('embedded-opentype'),
+       url('fonts/nuckle_semibold_web.woff2') format('woff2'),
+       url('fonts/nuckle_semibold_web.woff') format('woff'),
+       url('fonts/nuckle_semibold_web.ttf')  format('truetype'),
+       url('fonts/nuckle_semibold_web.svg#nucklesemi_bold') format('svg');
+}
+
+@font-face {
+  font-family: 'NuckleBook';
+  src: url('fonts/nuckle_book_web.eot');
+  src: url('fonts/nuckle_book_web.eot?#iefix') format('embedded-opentype'),
+       url('fonts/nuckle_book_web.woff2') format('woff2'),
+       url('fonts/nuckle_book_web.woff') format('woff'),
+       url('fonts/nuckle_book_web.ttf')  format('truetype'),
+       url('fonts/nuckle_book_web.svg#nucklebook') format('svg');
+}
+
+body {
+  font-family: 'NuckleBook', Fallback, sans-serif;
+  color: #000;
+}
+/* END FONTS */
+
+/* START NAVBAR */
+/* =================== */
+.navbar-default li a,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > .active > a {
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background: none;
+    transition: all 0.25s ease 0s;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-default li a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+    border-bottom: 2px solid;
+    border-bottom-color: #fecd2f;
+    color: #fecd2f;
+}
+/* END NAVBAR */
+
 /* START HERO LAYOUT */
 /* =================== */
 .sm_hero_layout {
@@ -134,26 +193,23 @@ Text Domain: solarmove
     box-shadow: inset 0 -3px 6px 0 rgba(0, 0, 0, 0.4);
 }
 .sm_simple_text_layout h2 {
-    color: #fff;
-    text-shadow: 1px 1px 2px #333;
+    font-size: 35px;
+    /* text-shadow: 1px 1px 2px #333; */
     text-align: center;
-    letter-spacing: 2.5px;
 }
 .sm_simple_text_layout p {
-    font-size: 1.286rem;
-    color: #fff;
-    font-weight: 400;
-    text-shadow: 1px 1px 2px #333;
+    font-size: 20px;
+    line-height: 25px;
+    /* text-shadow: 1px 1px 2px #333; */
     text-align: center;
     display: inline-block;
     width: 100%;
-    padding: 10px 0 0 0;
+    padding: 70px 0 50px 0;
 }
 .sm_simple_text_layout small {
-    font-size: 1.143rem;
-    color: #fff;
+    font-size: 15pt;
     font-weight: 400;
-    text-shadow: 1px 1px 2px #333;
+    /* text-shadow: 1px 1px 2px #333; */
     text-align: center;
     display: inline-block;
     width: 100%;
@@ -207,6 +263,16 @@ Text Domain: solarmove
     .sm_simple_text_layout_mission {
         background-attachment: scroll !important;
     }
+}
+
+section.dark a.btn-solarmove {
+  background: #fecd2f;
+  color: #fff;
+}
+
+section.lite a.btn-solarmove {
+  background: #000;
+  color: #fff;
 }
 /* END SIMPLE TEXT LAYOUT */
 
