@@ -12,7 +12,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<?php if ($integral['page-3-0-title']) { ?><h1><?php echo __($integral['page-3-0-title'], 'solarmove'); ?></h1><?php } ?>
+			<?php if ($integral['page-3-0-title']) { ?><h1><?php echo __($integral['page-3-0-title'], 'solarmove'); ?></h1>
+			<?php } else { ?><center><img src="/wp-content/themes/solarmove/assets/images/logo_black.png" style="max-width:60%;" /></center><?php } ?>
 			<?php if ($integral['page-3-0-subtitle']) { ?><h2><?php echo __($integral['page-3-0-subtitle'], 'solarmove'); ?></h2><?php } ?>
 			<?php if ($integral['page-3-0-tagline']) { ?>
             <div class="lead text-center">

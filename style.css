@@ -58,8 +58,7 @@ body {
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > .active > a {
     color: #fff;
-    font-size: 1rem;
-    letter-spacing: 1px;
+    text-transform: none;
     background: none;
     transition: all 0.25s ease 0s;
     border-bottom: 2px solid transparent;
@@ -84,7 +83,6 @@ body {
     padding: 190px 0 150px;
 }
 .sm_hero_layout h1 {
-    font-family: Montserrat;
     font-size: 6.429rem;
     letter-spacing: 1.25px;
     color: #fff;
@@ -95,7 +93,6 @@ body {
     padding: 0;
 }
 .sm_hero_layout h2 {
-    font-family: Montserrat;
     font-size: 5rem;
     letter-spacing: 1.25px;
     color: #fff;
@@ -264,42 +261,66 @@ body {
         background-attachment: scroll !important;
     }
 }
+/* END SIMPLE TEXT LAYOUT */
 
-section.dark a.btn-solarmove {
-  background: #fecd2f;
-  color: #fff;
+/* START SECTION BACKGROUNDS */
+/* =================== */
+section.grey {
+    background-color: #f0f0f0;
+    color: #000;
 }
-
-section.lite a.btn-solarmove {
+section.grey a.btn-solarmove,
+section.grey input[type=submit].btn-solarmove {
   background: #000;
   color: #fff;
 }
-/* END SIMPLE TEXT LAYOUT */
+section.dark {
+    background-color: #000;
+    color: #fff;
+}
+section.dark a.btn-solarmove,
+section.dark input[type=submit].btn-solarmove {
+  background: #fecd2f;
+  color: #000;
+}
+section.lite {
+    background-color: #fecd2f;
+    color: #000;
+}
+section.lite a.btn-solarmove,
+section.lite input[type=submit].btn-solarmove {
+  background: #000 !important;
+  color: #fff !important;
+}
+/* END SECTION BACKGROUNDS */
 
 /* START COLUMN LAYOUT */
 /* =================== */
+.sm_column_layout h2 {
+    text-align: center;
+}
 .sm_column_layout h3 {
-    padding-bottom: 20px;
-    text-transform: uppercase;
     font-size: 24px;
+}
+.sm_column_layout p {
+    text-align: center;
 }
 .sm_column_layout .feature {
     text-align: center;
-    margin: 20px 0 20px 0;
+    margin: 15px 0 15px 0;
 }
 .sm_column_layout .feature h2 {
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .sm_column_layout .feature span {
     display: inline-block;
     font-size: 80px;
     margin-bottom: 30px;
 }
-.sm_column_layout .feature .fimage {
-    margin-bottom: 30px;
-    max-width: 100%;
+.sm_column_layout .feature svg {
+    max-width: 80px;
 }
 /* END COLUMN LAYOUT */
 
@@ -411,8 +432,7 @@ section.lite a.btn-solarmove {
 
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
-.wpcf7 textarea
-{
+.wpcf7 textarea {
     background: #333;
     color: #fff !important;
     border: solid 1px #888;
@@ -550,11 +570,11 @@ table.solarmove-table td i.fa-orange {
 }
 
 .links a {
-  color: #888 !important;
+  color: #fff !important;
 }
 
 .links a:hover {
-  color: #888 !important;
+  color: #fecd2f !important;
   text-decoration: underline;
 }
 
@@ -597,6 +617,18 @@ table.solarmove-table td i.fa-orange {
   text-align: left;
   font-size: 8pt;
   color:#555;
+}
+
+.copyrightinfo {
+  font-size: 1rem;
+  color: #fff;
+}
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+.copyright a:hover {
+  text-decoration: underline;
 }
 
 /* Triangle overlays */

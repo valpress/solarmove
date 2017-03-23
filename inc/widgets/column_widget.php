@@ -50,7 +50,7 @@ class Solarmove_Column_Widget extends WP_Widget {
         
        // Check if text is set
        if( $text ) {
-          echo '<span class="fa '.$text.' featureicon"></span>';
+          echo '<svg class="fa ' . $text . ' featureicon"><use xlink:href="#' . $text . '" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>';
        }
        if( !$text && $image_url) {
           echo '<img class="fimage" src="'.$image_url.'">';

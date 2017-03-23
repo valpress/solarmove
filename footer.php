@@ -12,7 +12,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <?php if ($integral['links-title']) { ?><h3><?php echo $integral['links-title']; ?></h3><?php } ?>
+                <?php if ($integral['links-title']) { ?><h3><?php echo $integral['links-title']; ?></h3>
+                <?php } else { ?><img src="/wp-content/themes/solarmove/assets/images/logo_white.png" /><br/><br/><?php } ?>
                 <?php if ($integral['links-phone']) { ?><div class="info">
                 <span class="fa fa-phone fa-md"></span> <?php echo $integral['links-phone']; ?>
                 </div><?php } ?>
